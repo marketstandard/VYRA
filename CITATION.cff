@@ -3,7 +3,8 @@ message: "If you use VYRA or its results in your work, please cite it as below."
 title: "VYRA: Testing Yielding Resistance in Hybrid Post-Quantum Constructions by Failure Injection"
 type: software
 authors:
-  - name: "Encryptic1"
+  - given-names: "Carrington"
+    family-names: "Junior"
     affiliation: "Market Standard, LLC"
   - given-names: "Trey"
     family-names: "Huffine"

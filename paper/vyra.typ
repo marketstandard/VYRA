@@ -6,7 +6,7 @@
 
 #set document(
   title: "VYRA: Testing Yielding Resistance in Hybrid Post-Quantum Constructions by Failure Injection",
-  author: ("Encryptic1", "Trey Huffine"),
+  author: ("Carrington Junior", "Trey Huffine"),
   date: datetime(year: 2026, month: 11, day: 19),
 )
 
@@ -63,7 +63,7 @@
     #v(0.3em)
     #text(size: 10pt)[VYRA = Verified Yielding Resistance Architecture]
     #v(0.6em)
-    #text(size: 10.5pt)[Encryptic1 and Trey Huffine]
+    #text(size: 10.5pt)[Carrington Junior and Trey Huffine]
     #v(0.05em)
     #text(size: 9pt)[Market Standard, LLC]
     #v(0.05em)

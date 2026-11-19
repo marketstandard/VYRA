@@ -161,7 +161,7 @@ Either runner builds the image, runs every harness and every mutant of `tools/ka
 
 Benchmark results depend on the machine, so they are not recorded in this document. Passing the verification gates shows functional correctness, implementation hygiene and the machine-checked properties listed in `docs/CHECKS.md`. It does not show that VYRA is cryptographically sound.
 
-The continuous integration workflow (`.github/workflows/ci.yml`) runs `cargo fmt --all --check`, `cargo clippy`, `cargo test` and `cargo xtask verify` on `ubuntu-latest`, `windows-latest` and `macos-latest`.
+Continuous integration is split in two so that a pull request gets an answer in minutes. `.github/workflows/ci.yml` runs `cargo fmt --all --check`, `cargo clippy` and `cargo test` on every pull request and every push to `main`, on one `macos-latest` runner (about 7 minutes). `.github/workflows/full-verify.yml` runs `cargo xtask verify` on `macos-latest` and the test suite on `ubuntu-latest` and `windows-latest`; it runs weekly while the repository is public and whenever a maintainer starts it by hand. The arm64 macOS runners are used for the heavy jobs because the test suite, which is dominated by SHA-3 and SLH-DSA, runs about eight times faster there than on the x86-64 Linux runners.
 
 ## 8. Build the paper
 

@@ -1,5 +1,15 @@
 name: CI
 
+# The fast check: formatting, lints and the whole test suite, on one runner.
+# It takes a few minutes and runs on every pull request and every push to main.
+#
+# It runs on macOS because the arm64 runners finish the test suite in about
+# five minutes; the same suite takes about 45 minutes on the x86-64 Linux
+# runners (the tests are dominated by SHA-3 and SLH-DSA).
+#
+# The full gate run (`cargo xtask verify`) and the other platforms are in
+# full-verify.yml, which runs weekly and on demand, not on every push.
+
 on:
   push:
     branches: [main]
@@ -14,13 +24,10 @@ permissions:
   contents: read
 
 jobs:
-  build-and-verify:
-    name: ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+  check:
+    name: fmt, clippy, test
+    runs-on: macos-latest
+    timeout-minutes: 30
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
@@ -41,6 +48,3 @@ jobs:
 
       - name: Test
         run: cargo test --workspace --locked
-
-      - name: Verify
-        run: cargo xtask verify

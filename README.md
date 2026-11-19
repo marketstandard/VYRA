@@ -481,7 +481,7 @@ If you use VYRA or its results, please cite the repository. GitHub's "Cite this 
 
 ```bibtex
 @software{vyra2026,
-  author = {Encryptic1 and Huffine, Trey},
+  author = {Junior, Carrington and Huffine, Trey},
   title  = {{VYRA}: Testing Yielding Resistance in Hybrid Post-Quantum Constructions by Failure Injection},
   year   = {2026},
   organization = {Market Standard, LLC},

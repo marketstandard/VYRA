@@ -15,4 +15,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
 - The copyright holder is Market Standard, LLC; the repository is `marketstandard/VYRA`.
+- CI is split: a fast check (format, lints, tests; about 7 minutes) on every pull request and push to `main`, and the full gate run weekly and on demand.
 - `results/verification-report.*` no longer records machine-specific absolute paths; they are written as `<repo>`, `<tmp>` and `<home>`.

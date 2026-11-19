@@ -1,0 +1,74 @@
+name: Full verification
+
+# The slow checks, kept off the per-push path:
+#
+# - `cargo xtask verify`, every gate of docs/CHECKS.md, on macOS (about 35
+#   minutes there; about 4 hours on the x86-64 Linux runners).
+# - the test suite on Linux and Windows, for platform coverage.
+#
+# Runs once a week while the repository is public, and whenever a maintainer
+# starts it by hand (Actions tab, "Run workflow"). Run it before a release.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1"
+
+concurrency:
+  group: full-verify-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: cargo xtask verify (macOS)
+    # The weekly run is skipped while the repository is private.
+    if: github.event_name == 'workflow_dispatch' || github.event.repository.private == false
+    runs-on: macos-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Cache Cargo build artifacts
+        uses: Swatinem/rust-cache@v2
+
+      # Without cargo-audit and typst, gates S12 and D4 end NOT_RUN (not FAIL).
+      - name: Verify
+        run: cargo xtask verify
+
+      - name: Upload the verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-report
+          path: results/verification-report.*
+
+  platforms:
+    name: test (${{ matrix.os }})
+    if: github.event_name == 'workflow_dispatch' || github.event.repository.private == false
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo build artifacts
+        uses: Swatinem/rust-cache@v2
+
+      - name: Test
+        run: cargo test --workspace --locked

@@ -45,7 +45,9 @@ cargo test --workspace --locked
 
 ## Before opening a pull request
 
-Run the same checks as CI:
+Run the checks below. CI runs the first three on every pull request (a few
+minutes); the full `cargo xtask verify` runs weekly and before releases, so
+please run it yourself for any change to code or results:
 
 ```sh
 cargo fmt --all --check
