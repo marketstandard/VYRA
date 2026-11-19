@@ -1,6 +1,6 @@
 {
-  "commit": "372cd294a5fb1a2c5b5b66f34ed232c3715191af",
-  "date_utc": "2026-11-19T22:17:22Z",
+  "commit": "2ec648cc1ee710b6630bb82f2df5abbe9e6ecbd3",
+  "date_utc": "2026-11-19T23:14:45Z",
   "dirty_at_start": false,
   "gates": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "description": "workspace tests pass; no #[ignore] without reason",
-      "duration_s": 392.1,
+      "duration_s": 571.6,
       "evidence": "$ cargo test --workspace --locked -> exit Some(0), 70 test binaries, 427 passed, 0 failed\n   Doc-tests vyra_seal\n   Doc-tests vyra_sig\n   Doc-tests vyra_yield\nno #[ignore] without a reason string",
       "exit_code": 0,
       "id": "F2",
@@ -23,8 +23,8 @@
     },
     {
       "description": "hybrid KEM round trip, suites 1/3/5",
-      "duration_s": 2.7,
-      "evidence": "vyra-kem --test round_trip: 6 passed (2.7 s)",
+      "duration_s": 2.8,
+      "evidence": "vyra-kem --test round_trip: 6 passed (2.8 s)",
       "exit_code": 0,
       "id": "F3",
       "method": "cargo test -p vyra-kem --test round_trip --locked",
@@ -32,8 +32,8 @@
     },
     {
       "description": "component conformance (ML-KEM, HQC, ML-DSA, Ed25519)",
-      "duration_s": 208.6,
-      "evidence": "vyra-kem --test conformance_mlkem: 6 passed (0.2 s)\nvyra-kem --test conformance_hqc: 7 passed (4.1 s)\nvyra-hqc --test kat: 4 passed (1.1 s)\nvyra-sig --test conformance_mldsa: 5 passed (0.9 s)\nvyra-sig --test conformance_mldsa_acvp_sig: 2 passed (1.0 s)\nvyra-sig --test conformance_ed25519: 7 passed (0.1 s)\nvyra-sig --test conformance_slhdsa: 14 passed (199.8 s)\nvyra-sig --test conformance_sizes: 10 passed (1.4 s)",
+      "duration_s": 276.5,
+      "evidence": "vyra-kem --test conformance_mlkem: 6 passed (0.2 s)\nvyra-kem --test conformance_hqc: 7 passed (5.6 s)\nvyra-hqc --test kat: 4 passed (1.1 s)\nvyra-sig --test conformance_mldsa: 5 passed (0.9 s)\nvyra-sig --test conformance_mldsa_acvp_sig: 2 passed (1.0 s)\nvyra-sig --test conformance_ed25519: 7 passed (0.1 s)\nvyra-sig --test conformance_slhdsa: 14 passed (266.2 s)\nvyra-sig --test conformance_sizes: 10 passed (1.5 s)",
       "exit_code": 0,
       "id": "F4",
       "method": "cargo test -p vyra-kem --test conformance_mlkem --locked ; cargo test -p vyra-kem --test conformance_hqc --locked ; cargo test -p vyra-hqc --test kat --locked ; cargo test -p vyra-sig --test conformance_mldsa --locked ; cargo test -p vyra-sig --test conformance_mldsa_acvp_sig --locked ; cargo test -p vyra-sig --test conformance_ed25519 --locked ; cargo test -p vyra-sig --test conformance_slhdsa --locked ; cargo test -p vyra-sig --test conformance_sizes --locked",
@@ -50,7 +50,7 @@
     },
     {
       "description": "serialization round trip and lengths",
-      "duration_s": 7.3,
+      "duration_s": 7.4,
       "evidence": "vyra-core --test wire: 13 passed (0.1 s)\nvyra-kem --test wire: 6 passed (0.2 s)\nvyra-sig --test wire: 24 passed (5.8 s)\nvyra-seal --test round_trip: 7 passed (1.3 s)",
       "exit_code": 0,
       "id": "F6",
@@ -59,8 +59,8 @@
     },
     {
       "description": "composite signature round trip, all suites",
-      "duration_s": 24.3,
-      "evidence": "vyra-sig --test roundtrip: 15 passed (22.6 s)\nvyra-sig --test regression_transition: 1 passed (0.1 s)\nvyra-sig --test custom_composite: 5 passed (1.6 s)",
+      "duration_s": 34.5,
+      "evidence": "vyra-sig --test roundtrip: 15 passed (32.7 s)\nvyra-sig --test regression_transition: 1 passed (0.1 s)\nvyra-sig --test custom_composite: 5 passed (1.6 s)",
       "exit_code": 0,
       "id": "F7",
       "method": "cargo test -p vyra-sig --test roundtrip --locked ; cargo test -p vyra-sig --test regression_transition --locked ; cargo test -p vyra-sig --test custom_composite --locked",
@@ -77,8 +77,8 @@
     },
     {
       "description": "demonstration: vyra-cli demo",
-      "duration_s": 7.2,
-      "evidence": "$ cargo run -p vyra-cli --locked -- demo -> exit Some(0) (7.2 s)\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s\n     Running `target\\verify\\debug\\vyra.exe demo`",
+      "duration_s": 11.1,
+      "evidence": "$ cargo run -p vyra-cli --locked -- demo -> exit Some(0) (11.1 s)\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s\n     Running `target\\verify\\debug\\vyra.exe demo`",
       "exit_code": 0,
       "id": "F9",
       "method": "cargo run -p vyra-cli --locked -- demo",
@@ -87,7 +87,7 @@
     {
       "description": "length validation of every decoder",
       "duration_s": 0.5,
-      "evidence": "vyra-core --test wire: 13 passed (0.1 s)\nvyra-kem --test raw_validation: 3 passed (0.1 s)\nvyra-kem --test wire: 6 passed (0.2 s)\nvyra-sig --test wire: 24 passed (5.8 s)\nvyra-seal --test malformed: 4 passed (0.3 s)",
+      "evidence": "vyra-core --test wire: 13 passed (0.1 s)\nvyra-kem --test raw_validation: 3 passed (0.2 s)\nvyra-kem --test wire: 6 passed (0.2 s)\nvyra-sig --test wire: 24 passed (5.8 s)\nvyra-seal --test malformed: 4 passed (0.3 s)",
       "exit_code": 0,
       "id": "S1",
       "method": "cargo test -p vyra-core --test wire --locked ; cargo test -p vyra-kem --test raw_validation --locked ; cargo test -p vyra-kem --test wire --locked ; cargo test -p vyra-sig --test wire --locked ; cargo test -p vyra-seal --test malformed --locked",
@@ -113,8 +113,8 @@
     },
     {
       "description": "signature tampering",
-      "duration_s": 18.8,
-      "evidence": "vyra-sig --test tamper: 13 passed (10.9 s)\nvyra-sig --test separation: 11 passed (7.9 s)\nvyra-sig --test custom_composite: 5 passed (1.6 s)",
+      "duration_s": 27.4,
+      "evidence": "vyra-sig --test tamper: 13 passed (16.2 s)\nvyra-sig --test separation: 11 passed (11.2 s)\nvyra-sig --test custom_composite: 5 passed (1.6 s)",
       "exit_code": 0,
       "id": "S4",
       "method": "cargo test -p vyra-sig --test tamper --locked ; cargo test -p vyra-sig --test separation --locked ; cargo test -p vyra-sig --test custom_composite --locked",
@@ -122,8 +122,8 @@
     },
     {
       "description": "AEAD tampering",
-      "duration_s": 3.1,
-      "evidence": "vyra-seal --test tamper: 3 passed (3.1 s)",
+      "duration_s": 2.9,
+      "evidence": "vyra-seal --test tamper: 3 passed (2.9 s)",
       "exit_code": 0,
       "id": "S5",
       "method": "cargo test -p vyra-seal --test tamper --locked",
@@ -149,8 +149,8 @@
     },
     {
       "description": "no panics in library code (clippy deny list)",
-      "duration_s": 0.2,
-      "evidence": "$ cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing -> exit Some(0) (0.2 s)\nhelp: consider removing `package.homepage`\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s",
+      "duration_s": 0.5,
+      "evidence": "$ cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing -> exit Some(0) (0.5 s)\n    Checking vyra-yield v0.1.0 (<repo>\\crates\\vyra-yield)\n    Checking vyra v0.1.0 (<repo>\\crates\\vyra)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.43s",
       "exit_code": 0,
       "id": "S8",
       "method": "cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing",
@@ -159,7 +159,7 @@
     {
       "description": "secret hygiene (tests + no derive(PartialEq) on secret types)",
       "duration_s": 1.0,
-      "evidence": "vyra-core --test entropy_secret: 9 passed (0.1 s)\nvyra-kem --test hygiene: 3 passed (0.3 s)\nvyra-sig --test secret_hygiene: 5 passed (0.6 s)\ncode inspection: no secret-named type derives PartialEq (99 files)",
+      "evidence": "vyra-core --test entropy_secret: 9 passed (0.1 s)\nvyra-kem --test hygiene: 3 passed (0.2 s)\nvyra-sig --test secret_hygiene: 5 passed (0.6 s)\ncode inspection: no secret-named type derives PartialEq (99 files)",
       "exit_code": 0,
       "id": "S9",
       "method": "cargo test -p vyra-core --test entropy_secret --locked ; cargo test -p vyra-kem --test hygiene --locked ; cargo test -p vyra-sig --test secret_hygiene --locked ; scan crates/*/src/**/*.rs: no derive(PartialEq) on types named *Secret*",
@@ -167,8 +167,8 @@
     },
     {
       "description": "parser robustness (property tests)",
-      "duration_s": 1.3,
-      "evidence": "vyra-core --test wire: 13 passed (0.1 s)\nvyra-kem --test fuzz: 5 passed (0.2 s)\nvyra-sig --test proptest_parsers: 6 passed (0.5 s)\nvyra-seal --test fuzz: 3 passed (0.5 s)",
+      "duration_s": 4.9,
+      "evidence": "vyra-core --test wire: 13 passed (0.1 s)\nvyra-kem --test fuzz: 5 passed (0.2 s)\nvyra-sig --test proptest_parsers: 6 passed (4.2 s)\nvyra-seal --test fuzz: 3 passed (0.5 s)",
       "exit_code": 0,
       "id": "S10",
       "method": "cargo test -p vyra-core --test wire --locked ; cargo test -p vyra-kem --test fuzz --locked ; cargo test -p vyra-sig --test proptest_parsers --locked ; cargo test -p vyra-seal --test fuzz --locked",
@@ -176,8 +176,8 @@
     },
     {
       "description": "lint and format",
-      "duration_s": 0.5,
-      "evidence": "$ cargo clippy --workspace --all-targets --locked -- -D warnings -> exit Some(0) (0.2 s)\nhelp: consider removing `package.homepage`\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.13s\n$ cargo fmt --all --check -> exit Some(0) (0.3 s)\n",
+      "duration_s": 1.2,
+      "evidence": "$ cargo clippy --workspace --all-targets --locked -- -D warnings -> exit Some(0) (0.9 s)\n    Checking xtask v0.1.0 (<repo>\\xtask)\n    Checking vyra-cli v0.1.0 (<repo>\\crates\\vyra-cli)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.81s\n$ cargo fmt --all --check -> exit Some(0) (0.3 s)\n",
       "exit_code": 0,
       "id": "S11",
       "method": "cargo clippy --workspace --all-targets --locked -- -D warnings && cargo fmt --all --check",
@@ -203,7 +203,7 @@
     },
     {
       "description": "forbidden claims absent",
-      "duration_s": 0.0,
+      "duration_s": 0.1,
       "evidence": "no forbidden phrase in 239 files",
       "exit_code": null,
       "id": "C2",
@@ -221,7 +221,7 @@
     },
     {
       "description": "benchmarks written with all required entries",
-      "duration_s": 148.6,
+      "duration_s": 278.0,
       "evidence": "all 66 required entries present in the fresh run and the published file (3 KEM suites, 6 KEM components, 6 signature suites incl. the dual post-quantum ones, 3 SLH-DSA components, seal/open 1 KiB and 1 MiB); published results/benchmarks.* preserved; fresh run copied to target/verify/",
       "exit_code": null,
       "id": "P1",
@@ -230,7 +230,7 @@
     },
     {
       "description": "sizes written from code constants",
-      "duration_s": 12.0,
+      "duration_s": 23.2,
       "evidence": "13 components, 3 KEM, 6 signature and 3 sealed-box suites; every constant equals a generated object's length (SPEC comparison is D3)",
       "exit_code": null,
       "id": "P2",
@@ -240,7 +240,7 @@
     {
       "description": "API docs build with -D warnings; deny(missing_docs)",
       "duration_s": 0.2,
-      "evidence": "$ cargo doc --workspace --no-deps --locked -> exit Some(0) (0.2 s)\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s\n   Generated <repo>\\target\\verify\\doc\\vyra\\index.html and 9 other files\n#![deny(missing_docs)] present in every library crate root",
+      "evidence": "$ cargo doc --workspace --no-deps --locked -> exit Some(0) (0.2 s)\nwarning: `vyra-cli` (manifest) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.19s\n   Generated <repo>\\target\\verify\\doc\\vyra\\index.html and 9 other files\n#![deny(missing_docs)] present in every library crate root",
       "exit_code": 0,
       "id": "D1",
       "method": "RUSTDOCFLAGS=-D warnings cargo doc --workspace --no-deps --locked + check #![deny(missing_docs)] in crates/*/src/lib.rs",
@@ -275,8 +275,8 @@
     },
     {
       "description": "fresh git clone passes F1, F2, F5",
-      "duration_s": 436.7,
-      "evidence": "commit tested: 372cd294a5fb1a2c5b5b66f34ed232c3715191af\n$ cargo build --workspace --all-targets --locked -> exit Some(0) (23.7 s)\n   Compiling vyra-cli v0.1.0 (<tmp>\\vyra-d5-33432-1795127509381886700\\crates\\vyra-cli)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.70s\n$ cargo test --workspace --locked -> exit Some(0) (367.9 s)\n   Doc-tests vyra_sig\n   Doc-tests vyra_yield\n$ cargo xtask vectors --check -> exit Some(0) (40.2 s)\n   = note: `cargo::redundant_homepage` is set to `warn` by default\nhelp: consider removing `package.homepage`\ntemporary clone deleted",
+      "duration_s": 681.4,
+      "evidence": "commit tested: 2ec648cc1ee710b6630bb82f2df5abbe9e6ecbd3\n$ cargo build --workspace --all-targets --locked -> exit Some(0) (23.9 s)\n   Compiling xtask v0.1.0 (<tmp>\\vyra-d5-39500-1795131367802669700\\xtask)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.83s\n$ cargo test --workspace --locked -> exit Some(0) (589.2 s)\n   Doc-tests vyra_sig\n   Doc-tests vyra_yield\n$ cargo xtask vectors --check -> exit Some(0) (65.8 s)\n   = note: `cargo::redundant_homepage` is set to `warn` by default\nhelp: consider removing `package.homepage`\ntemporary clone deleted",
       "exit_code": 0,
       "id": "D5",
       "method": "git clone --no-hardlinks <workspace> <temp>; in the clone: cargo build --workspace --all-targets --locked && cargo test --workspace --locked && cargo xtask vectors --check",
@@ -284,8 +284,8 @@
     },
     {
       "description": "failure-injection tests (cargo test -p vyra-yield)",
-      "duration_s": 80.9,
-      "evidence": "$ cargo test -p vyra-yield --locked -> exit Some(0), 6 test binaries, 24 passed, 0 failed (80.9 s)\n     Running tests\\components.rs (target\\verify\\debug\\build\\vyra-yield/4a257e9ec3dc1e14\\out\\components-4a257e9ec3dc1e14.exe)\n     Running tests\\matrix.rs (target\\verify\\debug\\build\\vyra-yield/e4eb4c84d9e825f2\\out\\matrix-e4eb4c84d9e825f2.exe)\n     Running tests\\sig.rs (target\\verify\\debug\\build\\vyra-yield/ec37d5d44f0fd5e7\\out\\sig-ec37d5d44f0fd5e7.exe)\n   Doc-tests vyra_yield",
+      "duration_s": 98.3,
+      "evidence": "$ cargo test -p vyra-yield --locked -> exit Some(0), 6 test binaries, 24 passed, 0 failed (98.3 s)\n     Running tests\\components.rs (target\\verify\\debug\\build\\vyra-yield/4a257e9ec3dc1e14\\out\\components-4a257e9ec3dc1e14.exe)\n     Running tests\\matrix.rs (target\\verify\\debug\\build\\vyra-yield/e4eb4c84d9e825f2\\out\\matrix-e4eb4c84d9e825f2.exe)\n     Running tests\\sig.rs (target\\verify\\debug\\build\\vyra-yield/ec37d5d44f0fd5e7\\out\\sig-ec37d5d44f0fd5e7.exe)\n   Doc-tests vyra_yield",
       "exit_code": 0,
       "id": "Y1",
       "method": "cargo test -p vyra-yield --locked",
@@ -293,8 +293,8 @@
     },
     {
       "description": "yield matrix reproducible and verdict pattern as claimed",
-      "duration_s": 243.2,
-      "evidence": "$ cargo run -p vyra-yield --release --bin yield-report -> exit Some(0) (243.1 s)\nfresh yield-matrix.json is byte-identical to results/yield-matrix.json (1868040 bytes)\nyield-matrix.md equals the committed one (informational)\ncells by primitive: kem 1955, sig 1410; 759 with `expected` (all equal); KEM: 230 Vyra cells with one failed component all NO ATTACK FOUND, 8 Naive single-Malleable cells BROKEN, 15 positive-control groups BROKEN; other families: 0 Vyra single-failure cells (no `expected` field) NO ATTACK FOUND, 1089 cells with no stated expectation (not judged); 31 controls/claim/expectation checks all passed; calibration NO ATTACK FOUND",
+      "duration_s": 231.4,
+      "evidence": "$ cargo run -p vyra-yield --release --bin yield-report -> exit Some(0) (231.4 s)\nfresh yield-matrix.json is byte-identical to results/yield-matrix.json (1868040 bytes)\nyield-matrix.md equals the committed one (informational)\ncells by primitive: kem 1955, sig 1410; 759 with `expected` (all equal); KEM: 230 Vyra cells with one failed component all NO ATTACK FOUND, 8 Naive single-Malleable cells BROKEN, 15 positive-control groups BROKEN; other families: 0 Vyra single-failure cells (no `expected` field) NO ATTACK FOUND, 1089 cells with no stated expectation (not judged); 31 controls/claim/expectation checks all passed; calibration NO ATTACK FOUND",
       "exit_code": 0,
       "id": "Y2",
       "method": "cargo run -p vyra-yield --release --locked --bin yield-report -- --out <repo>\\target\\verify\\yield-matrix ; byte-compare yield-matrix.json with results/yield-matrix.json ; check the verdict pattern of the committed JSON",

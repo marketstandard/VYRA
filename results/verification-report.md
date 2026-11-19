@@ -1,9 +1,9 @@
 # VYRA verification report
 
 - mode: full
-- commit: 372cd294a5fb1a2c5b5b66f34ed232c3715191af
+- commit: 2ec648cc1ee710b6630bb82f2df5abbe9e6ecbd3
 - working tree dirty at start: false
-- date (UTC): 2026-11-19T22:17:22Z
+- date (UTC): 2026-11-19T23:14:45Z
 - summary: 37 PASS, 0 FAIL, 0 NOT_RUN of 37
 
 PASS demonstrates that a gate's command or check succeeded. It does not demonstrate that VYRA is cryptographically secure (see docs/CHECKS.md). NOT_RUN is never a pass.
@@ -11,38 +11,38 @@ PASS demonstrates that a gate's command or check succeeded. It does not demonstr
 | gate | status | exit | time (s) | description |
 |---|---|---|---|---|
 | F1 | PASS | 0 | 0.2 | workspace builds (all targets) |
-| F2 | PASS | 0 | 392.1 | workspace tests pass; no #[ignore] without reason |
-| F3 | PASS | 0 | 2.7 | hybrid KEM round trip, suites 1/3/5 |
-| F4 | PASS | 0 | 208.6 | component conformance (ML-KEM, HQC, ML-DSA, Ed25519) |
+| F2 | PASS | 0 | 571.6 | workspace tests pass; no #[ignore] without reason |
+| F3 | PASS | 0 | 2.8 | hybrid KEM round trip, suites 1/3/5 |
+| F4 | PASS | 0 | 276.5 | component conformance (ML-KEM, HQC, ML-DSA, Ed25519) |
 | F5 | PASS | - | 35.0 | VYRA known-answer vectors (vectors --check) |
-| F6 | PASS | 0 | 7.3 | serialization round trip and lengths |
-| F7 | PASS | 0 | 24.3 | composite signature round trip, all suites |
+| F6 | PASS | 0 | 7.4 | serialization round trip and lengths |
+| F7 | PASS | 0 | 34.5 | composite signature round trip, all suites |
 | F8 | PASS | 0 | 0.0 | sealed box round trip incl. empty and 1 MiB |
-| F9 | PASS | 0 | 7.2 | demonstration: vyra-cli demo |
+| F9 | PASS | 0 | 11.1 | demonstration: vyra-cli demo |
 | S1 | PASS | 0 | 0.5 | length validation of every decoder |
 | S2 | PASS | 0 | 0.0 | header validation (magic, version, type, suite) |
 | S3 | PASS | 0 | 1.2 | KEM ciphertext tampering (implicit rejection) |
-| S4 | PASS | 0 | 18.8 | signature tampering |
-| S5 | PASS | 0 | 3.1 | AEAD tampering |
+| S4 | PASS | 0 | 27.4 | signature tampering |
+| S5 | PASS | 0 | 2.9 | AEAD tampering |
 | S6 | PASS | 0 | 0.8 | combiner binding |
 | S7 | PASS | - | 0.0 | no unsafe: #![forbid(unsafe_code)] in every crate root |
-| S8 | PASS | 0 | 0.2 | no panics in library code (clippy deny list) |
+| S8 | PASS | 0 | 0.5 | no panics in library code (clippy deny list) |
 | S9 | PASS | 0 | 1.0 | secret hygiene (tests + no derive(PartialEq) on secret types) |
-| S10 | PASS | 0 | 1.3 | parser robustness (property tests) |
-| S11 | PASS | 0 | 0.5 | lint and format |
+| S10 | PASS | 0 | 4.9 | parser robustness (property tests) |
+| S11 | PASS | 0 | 1.2 | lint and format |
 | S12 | PASS | 0 | 1.2 | dependency advisories (cargo audit) |
 | C1 | PASS | - | 0.0 | docs/SECURITY.md required sections |
-| C2 | PASS | - | 0.0 | forbidden claims absent |
+| C2 | PASS | - | 0.1 | forbidden claims absent |
 | C3 | PASS | - | 0.0 | docs/SPEC.md labels components ESTABLISHED / VYRA-ORIGINAL |
-| P1 | PASS | - | 148.6 | benchmarks written with all required entries |
-| P2 | PASS | - | 12.0 | sizes written from code constants |
+| P1 | PASS | - | 278.0 | benchmarks written with all required entries |
+| P2 | PASS | - | 23.2 | sizes written from code constants |
 | D1 | PASS | 0 | 0.2 | API docs build with -D warnings; deny(missing_docs) |
 | D2 | PASS | 0 | 0.0 | doctests (included in F2) |
 | D3 | PASS | - | 0.0 | docs/SPEC.md sizes and suite ids equal results/sizes.json |
 | D4 | PASS | 0 | 0.4 | paper compiles with typst |
-| D5 | PASS | 0 | 436.7 | fresh git clone passes F1, F2, F5 |
-| Y1 | PASS | 0 | 80.9 | failure-injection tests (cargo test -p vyra-yield) |
-| Y2 | PASS | 0 | 243.2 | yield matrix reproducible and verdict pattern as claimed |
+| D5 | PASS | 0 | 681.4 | fresh git clone passes F1, F2, F5 |
+| Y1 | PASS | 0 | 98.3 | failure-injection tests (cargo test -p vyra-yield) |
+| Y2 | PASS | 0 | 231.4 | yield matrix reproducible and verdict pattern as claimed |
 | V1 | PASS | 0 | 6.9 | exhaustive enumeration proofs (cargo test -p vyra-proofs) |
 | V2 | PASS | - | 0.0 | bounded model checking report (Kani): harnesses and mutants |
 | X1 | PASS | - | 0.0 | research report preserved (SHA-256 pin) |
@@ -81,7 +81,7 @@ no #[ignore] without a reason string
 - method: `cargo test -p vyra-kem --test round_trip --locked`
 
 ```text
-vyra-kem --test round_trip: 6 passed (2.7 s)
+vyra-kem --test round_trip: 6 passed (2.8 s)
 ```
 
 ### F4 — PASS
@@ -91,13 +91,13 @@ vyra-kem --test round_trip: 6 passed (2.7 s)
 
 ```text
 vyra-kem --test conformance_mlkem: 6 passed (0.2 s)
-vyra-kem --test conformance_hqc: 7 passed (4.1 s)
+vyra-kem --test conformance_hqc: 7 passed (5.6 s)
 vyra-hqc --test kat: 4 passed (1.1 s)
 vyra-sig --test conformance_mldsa: 5 passed (0.9 s)
 vyra-sig --test conformance_mldsa_acvp_sig: 2 passed (1.0 s)
 vyra-sig --test conformance_ed25519: 7 passed (0.1 s)
-vyra-sig --test conformance_slhdsa: 14 passed (199.8 s)
-vyra-sig --test conformance_sizes: 10 passed (1.4 s)
+vyra-sig --test conformance_slhdsa: 14 passed (266.2 s)
+vyra-sig --test conformance_sizes: 10 passed (1.5 s)
 ```
 
 ### F5 — PASS
@@ -127,7 +127,7 @@ vyra-seal --test round_trip: 7 passed (1.3 s)
 - method: `cargo test -p vyra-sig --test roundtrip --locked ; cargo test -p vyra-sig --test regression_transition --locked ; cargo test -p vyra-sig --test custom_composite --locked`
 
 ```text
-vyra-sig --test roundtrip: 15 passed (22.6 s)
+vyra-sig --test roundtrip: 15 passed (32.7 s)
 vyra-sig --test regression_transition: 1 passed (0.1 s)
 vyra-sig --test custom_composite: 5 passed (1.6 s)
 ```
@@ -147,7 +147,7 @@ vyra-seal --test round_trip: 7 passed (1.3 s)
 - method: `cargo run -p vyra-cli --locked -- demo`
 
 ```text
-$ cargo run -p vyra-cli --locked -- demo -> exit Some(0) (7.2 s)
+$ cargo run -p vyra-cli --locked -- demo -> exit Some(0) (11.1 s)
 warning: `vyra-cli` (manifest) generated 1 warning
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
      Running `target\verify\debug\vyra.exe demo`
@@ -160,7 +160,7 @@ warning: `vyra-cli` (manifest) generated 1 warning
 
 ```text
 vyra-core --test wire: 13 passed (0.1 s)
-vyra-kem --test raw_validation: 3 passed (0.1 s)
+vyra-kem --test raw_validation: 3 passed (0.2 s)
 vyra-kem --test wire: 6 passed (0.2 s)
 vyra-sig --test wire: 24 passed (5.8 s)
 vyra-seal --test malformed: 4 passed (0.3 s)
@@ -193,8 +193,8 @@ vyra-kem --test tamper: 4 passed (1.2 s)
 - method: `cargo test -p vyra-sig --test tamper --locked ; cargo test -p vyra-sig --test separation --locked ; cargo test -p vyra-sig --test custom_composite --locked`
 
 ```text
-vyra-sig --test tamper: 13 passed (10.9 s)
-vyra-sig --test separation: 11 passed (7.9 s)
+vyra-sig --test tamper: 13 passed (16.2 s)
+vyra-sig --test separation: 11 passed (11.2 s)
 vyra-sig --test custom_composite: 5 passed (1.6 s)
 ```
 
@@ -204,7 +204,7 @@ vyra-sig --test custom_composite: 5 passed (1.6 s)
 - method: `cargo test -p vyra-seal --test tamper --locked`
 
 ```text
-vyra-seal --test tamper: 3 passed (3.1 s)
+vyra-seal --test tamper: 3 passed (2.9 s)
 ```
 
 ### S6 — PASS
@@ -233,10 +233,10 @@ vyra-kem --test custom_assembly: 3 passed (0.4 s)
 - method: `cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing`
 
 ```text
-$ cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing -> exit Some(0) (0.2 s)
-help: consider removing `package.homepage`
-warning: `vyra-cli` (manifest) generated 1 warning
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+$ cargo clippy --workspace --lib --locked -- -D clippy::unwrap_used -D clippy::expect_used -D clippy::panic -D clippy::indexing_slicing -> exit Some(0) (0.5 s)
+    Checking vyra-yield v0.1.0 (<repo>\crates\vyra-yield)
+    Checking vyra v0.1.0 (<repo>\crates\vyra)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.43s
 ```
 
 ### S9 — PASS
@@ -246,7 +246,7 @@ warning: `vyra-cli` (manifest) generated 1 warning
 
 ```text
 vyra-core --test entropy_secret: 9 passed (0.1 s)
-vyra-kem --test hygiene: 3 passed (0.3 s)
+vyra-kem --test hygiene: 3 passed (0.2 s)
 vyra-sig --test secret_hygiene: 5 passed (0.6 s)
 code inspection: no secret-named type derives PartialEq (99 files)
 ```
@@ -259,7 +259,7 @@ code inspection: no secret-named type derives PartialEq (99 files)
 ```text
 vyra-core --test wire: 13 passed (0.1 s)
 vyra-kem --test fuzz: 5 passed (0.2 s)
-vyra-sig --test proptest_parsers: 6 passed (0.5 s)
+vyra-sig --test proptest_parsers: 6 passed (4.2 s)
 vyra-seal --test fuzz: 3 passed (0.5 s)
 ```
 
@@ -269,10 +269,10 @@ vyra-seal --test fuzz: 3 passed (0.5 s)
 - method: `cargo clippy --workspace --all-targets --locked -- -D warnings && cargo fmt --all --check`
 
 ```text
-$ cargo clippy --workspace --all-targets --locked -- -D warnings -> exit Some(0) (0.2 s)
-help: consider removing `package.homepage`
-warning: `vyra-cli` (manifest) generated 1 warning
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.13s
+$ cargo clippy --workspace --all-targets --locked -- -D warnings -> exit Some(0) (0.9 s)
+    Checking xtask v0.1.0 (<repo>\xtask)
+    Checking vyra-cli v0.1.0 (<repo>\crates\vyra-cli)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.81s
 $ cargo fmt --all --check -> exit Some(0) (0.3 s)
 
 ```
@@ -342,7 +342,7 @@ all 66 required entries present in the fresh run and the published file (3 KEM s
 ```text
 $ cargo doc --workspace --no-deps --locked -> exit Some(0) (0.2 s)
 warning: `vyra-cli` (manifest) generated 1 warning
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.19s
    Generated <repo>\target\verify\doc\vyra\index.html and 9 other files
 #![deny(missing_docs)] present in every library crate root
 ```
@@ -381,14 +381,14 @@ exit Some(0) (0.4 s)
 - method: `git clone --no-hardlinks <workspace> <temp>; in the clone: cargo build --workspace --all-targets --locked && cargo test --workspace --locked && cargo xtask vectors --check`
 
 ```text
-commit tested: 372cd294a5fb1a2c5b5b66f34ed232c3715191af
-$ cargo build --workspace --all-targets --locked -> exit Some(0) (23.7 s)
-   Compiling vyra-cli v0.1.0 (<tmp>\vyra-d5-33432-1795127509381886700\crates\vyra-cli)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.70s
-$ cargo test --workspace --locked -> exit Some(0) (367.9 s)
+commit tested: 2ec648cc1ee710b6630bb82f2df5abbe9e6ecbd3
+$ cargo build --workspace --all-targets --locked -> exit Some(0) (23.9 s)
+   Compiling xtask v0.1.0 (<tmp>\vyra-d5-39500-1795131367802669700\xtask)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.83s
+$ cargo test --workspace --locked -> exit Some(0) (589.2 s)
    Doc-tests vyra_sig
    Doc-tests vyra_yield
-$ cargo xtask vectors --check -> exit Some(0) (40.2 s)
+$ cargo xtask vectors --check -> exit Some(0) (65.8 s)
    = note: `cargo::redundant_homepage` is set to `warn` by default
 help: consider removing `package.homepage`
 temporary clone deleted
@@ -400,7 +400,7 @@ temporary clone deleted
 - method: `cargo test -p vyra-yield --locked`
 
 ```text
-$ cargo test -p vyra-yield --locked -> exit Some(0), 6 test binaries, 24 passed, 0 failed (80.9 s)
+$ cargo test -p vyra-yield --locked -> exit Some(0), 6 test binaries, 24 passed, 0 failed (98.3 s)
      Running tests\components.rs (target\verify\debug\build\vyra-yield/4a257e9ec3dc1e14\out\components-4a257e9ec3dc1e14.exe)
      Running tests\matrix.rs (target\verify\debug\build\vyra-yield/e4eb4c84d9e825f2\out\matrix-e4eb4c84d9e825f2.exe)
      Running tests\sig.rs (target\verify\debug\build\vyra-yield/ec37d5d44f0fd5e7\out\sig-ec37d5d44f0fd5e7.exe)
@@ -413,7 +413,7 @@ $ cargo test -p vyra-yield --locked -> exit Some(0), 6 test binaries, 24 passed,
 - method: `cargo run -p vyra-yield --release --locked --bin yield-report -- --out <repo>\target\verify\yield-matrix ; byte-compare yield-matrix.json with results/yield-matrix.json ; check the verdict pattern of the committed JSON`
 
 ```text
-$ cargo run -p vyra-yield --release --bin yield-report -> exit Some(0) (243.1 s)
+$ cargo run -p vyra-yield --release --bin yield-report -> exit Some(0) (231.4 s)
 fresh yield-matrix.json is byte-identical to results/yield-matrix.json (1868040 bytes)
 yield-matrix.md equals the committed one (informational)
 cells by primitive: kem 1955, sig 1410; 759 with `expected` (all equal); KEM: 230 Vyra cells with one failed component all NO ATTACK FOUND, 8 Naive single-Malleable cells BROKEN, 15 positive-control groups BROKEN; other families: 0 Vyra single-failure cells (no `expected` field) NO ATTACK FOUND, 1089 cells with no stated expectation (not judged); 31 controls/claim/expectation checks all passed; calibration NO ATTACK FOUND
