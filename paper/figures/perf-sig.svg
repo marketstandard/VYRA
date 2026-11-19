@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 272" width="880" height="272" font-family="'Libertinus Serif', serif" role="img">
+<title>Signature speed: the price of two post-quantum assumptions</title>
+<circle cx="134" cy="14" r="5" fill="#1baf7a"/>
+<text x="146" y="18.5" font-size="11.5" fill="#333333">key generation</text>
+<circle cx="256.5" cy="14" r="5" fill="#2a78d6"/>
+<text x="268.5" y="18.5" font-size="11.5" fill="#333333">sign</text>
+<circle cx="321.5" cy="14" r="5" fill="#eb6834"/>
+<text x="333.5" y="18.5" font-size="11.5" fill="#333333">verify</text>
+<line x1="128" y1="36" x2="128" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="128" y="237" font-size="10.5" fill="#666666" text-anchor="middle">0.1 ms</text>
+<line x1="262.4" y1="36" x2="262.4" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="262.4" y="237" font-size="10.5" fill="#666666" text-anchor="middle">1 ms</text>
+<line x1="396.8" y1="36" x2="396.8" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="396.8" y="237" font-size="10.5" fill="#666666" text-anchor="middle">10 ms</text>
+<line x1="531.2" y1="36" x2="531.2" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="531.2" y="237" font-size="10.5" fill="#666666" text-anchor="middle">100 ms</text>
+<line x1="665.6" y1="36" x2="665.6" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="665.6" y="237" font-size="10.5" fill="#666666" text-anchor="middle">1 s</text>
+<line x1="800" y1="36" x2="800" y2="222" stroke="#dddddd" stroke-width="1"/>
+<text x="800" y="237" font-size="10.5" fill="#666666" text-anchor="middle">10 s</text>
+<rect x="16" y="38" width="167.5" height="14" fill="#ffffff"/>
+<text x="16" y="50" font-size="11" fill="#666666" font-weight="600">Transition (ML-DSA + Ed25519)</text>
+<text x="120" y="68" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-2</text>
+<line x1="128" y1="64" x2="800" y2="64" stroke="#dddddd" stroke-width="1"/>
+<circle cx="180.6" cy="64" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="263.3" cy="64" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="166.2" cy="64" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="274.3" y="68" font-size="11.5" fill="#000000">1.01 ms</text>
+<text x="120" y="92" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-3</text>
+<line x1="128" y1="88" x2="800" y2="88" stroke="#dddddd" stroke-width="1"/>
+<circle cx="177.9" cy="88" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="267.6" cy="88" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="182.4" cy="88" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="278.6" y="92" font-size="11.5" fill="#000000">1.09 ms</text>
+<text x="120" y="116" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-5</text>
+<line x1="128" y1="112" x2="800" y2="112" stroke="#dddddd" stroke-width="1"/>
+<circle cx="199.8" cy="112" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="284.8" cy="112" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="222" cy="112" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="295.8" y="116" font-size="11.5" fill="#000000">1.47 ms</text>
+<rect x="16" y="130" width="206" height="14" fill="#ffffff"/>
+<text x="16" y="142" font-size="11" fill="#666666" font-weight="600">Dual post-quantum (ML-DSA + SLH-DSA)</text>
+<text x="120" y="160" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-PQ1</text>
+<line x1="128" y1="156" x2="800" y2="156" stroke="#dddddd" stroke-width="1"/>
+<circle cx="550" cy="156" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="682.1" cy="156" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="271.8" cy="156" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="693.1" y="160" font-size="11.5" fill="#000000">1.33 s</text>
+<text x="120" y="184" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-PQ3</text>
+<line x1="128" y1="180" x2="800" y2="180" stroke="#dddddd" stroke-width="1"/>
+<circle cx="570.4" cy="180" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="716" cy="180" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="288.6" cy="180" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="727" y="184" font-size="11.5" fill="#000000">2.37 s</text>
+<text x="120" y="208" font-size="11.5" fill="#333333" text-anchor="end">VYRA-SIG-PQ5</text>
+<line x1="128" y1="204" x2="800" y2="204" stroke="#dddddd" stroke-width="1"/>
+<circle cx="548.6" cy="204" r="5" fill="#1baf7a" stroke="#ffffff" stroke-width="2"/>
+<circle cx="700.7" cy="204" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="313.7" cy="204" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2"/>
+<text x="711.7" y="208" font-size="11.5" fill="#000000">1.83 s</text>
+<text x="464" y="256" font-size="11" fill="#666666" text-anchor="middle">time per operation (labels: signing median)</text>
+</svg>

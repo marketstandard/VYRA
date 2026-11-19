@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 204" width="880" height="204" font-family="'Libertinus Serif', serif" role="img">
+<title>Broken squares when exactly one component has failed</title>
+<text x="16" y="20" font-size="12.5" fill="#000000" font-weight="600">KEM</text>
+<text x="16" y="36" font-size="11" fill="#333333">ML-KEM-512 + HQC-128</text>
+<line x1="94" y1="50" x2="94" y2="168" stroke="#999999" stroke-width="1"/>
+<text x="86" y="65" font-size="11.5" fill="#333333" text-anchor="end">Naive</text>
+<path d="M94,54 H131.6 Q135.6,54 135.6,58 V64 Q135.6,68 131.6,68 H94 Z" fill="#b0b0b0"/>
+<text x="142.6" y="65" font-size="11.5" fill="#333333">28 / 70</text>
+<text x="86" y="89" font-size="11.5" fill="#333333" text-anchor="end">Xor</text>
+<path d="M94,78 H140.5 Q144.5,78 144.5,82 V88 Q144.5,92 140.5,92 H94 Z" fill="#b0b0b0"/>
+<text x="151.5" y="89" font-size="11.5" fill="#333333">34 / 70</text>
+<text x="86" y="113" font-size="11.5" fill="#333333" text-anchor="end">CtBound</text>
+<path d="M94,102 H95.9 Q99.9,102 99.9,106 V112 Q99.9,116 95.9,116 H94 Z" fill="#b0b0b0"/>
+<text x="106.9" y="113" font-size="11.5" fill="#333333">4 / 70</text>
+<text x="86" y="137" font-size="11.5" fill="#333333" text-anchor="end">XWingStyle</text>
+<path d="M94,126 H110.8 Q114.8,126 114.8,130 V136 Q114.8,140 110.8,140 H94 Z" fill="#b0b0b0"/>
+<text x="121.8" y="137" font-size="11.5" fill="#333333">14 / 70</text>
+<text x="86" y="161" font-size="11.5" fill="#000000" text-anchor="end" font-weight="700">VYRA</text>
+<text x="101" y="161" font-size="11.5" fill="#000000" font-weight="700">0 / 70</text>
+<text x="306" y="20" font-size="12.5" fill="#000000" font-weight="600">Signatures, transition</text>
+<text x="306" y="36" font-size="11" fill="#333333">ML-DSA-44 + Ed25519</text>
+<line x1="384" y1="50" x2="384" y2="168" stroke="#999999" stroke-width="1"/>
+<text x="376" y="65" font-size="11.5" fill="#333333" text-anchor="end">Concat</text>
+<path d="M384,54 H444.7 Q448.7,54 448.7,58 V64 Q448.7,68 444.7,68 H384 Z" fill="#b0b0b0"/>
+<text x="455.7" y="65" font-size="11.5" fill="#333333">56 / 90</text>
+<text x="376" y="89" font-size="11.5" fill="#333333" text-anchor="end">ConcatCtx</text>
+<path d="M384,78 H421.6 Q425.6,78 425.6,82 V88 Q425.6,92 421.6,92 H384 Z" fill="#b0b0b0"/>
+<text x="432.6" y="89" font-size="11.5" fill="#333333">36 / 90</text>
+<text x="376" y="113" font-size="11.5" fill="#333333" text-anchor="end">Either</text>
+<path d="M384,102 H406.6 Q410.6,102 410.6,106 V112 Q410.6,116 406.6,116 H384 Z" fill="#b0b0b0"/>
+<text x="417.6" y="113" font-size="11.5" fill="#333333">23 / 90</text>
+<text x="376" y="137" font-size="11.5" fill="#333333" text-anchor="end">VyraPureEd</text>
+<path d="M384,126 H398.5 Q402.5,126 402.5,130 V136 Q402.5,140 398.5,140 H384 Z" fill="#b0b0b0"/>
+<text x="409.5" y="137" font-size="11.5" fill="#333333">16 / 90</text>
+<text x="376" y="161" font-size="11.5" fill="#000000" text-anchor="end" font-weight="700">VYRA</text>
+<path d="M384,150 H386.9 Q390.9,150 390.9,154 V160 Q390.9,164 386.9,164 H384 Z" fill="#2a78d6"/>
+<text x="397.9" y="161" font-size="11.5" fill="#000000" font-weight="700">6 / 90</text>
+<text x="596" y="20" font-size="12.5" fill="#000000" font-weight="600">Signatures, dual post-quantum</text>
+<text x="596" y="36" font-size="11" fill="#333333">ML-DSA-44 + SLH-DSA-SHAKE-128s</text>
+<line x1="674" y1="50" x2="674" y2="96" stroke="#999999" stroke-width="1"/>
+<text x="666" y="65" font-size="11.5" fill="#333333" text-anchor="end">Concat</text>
+<path d="M674,54 H735 Q739,54 739,58 V64 Q739,68 735,68 H674 Z" fill="#b0b0b0"/>
+<text x="746" y="65" font-size="11.5" fill="#333333">20 / 32</text>
+<text x="666" y="89" font-size="11.5" fill="#000000" text-anchor="end" font-weight="700">VYRA</text>
+<path d="M674,78 H676.5 Q680.5,78 680.5,82 V88 Q680.5,92 676.5,92 H674 Z" fill="#2a78d6"/>
+<text x="687.5" y="89" font-size="11.5" fill="#000000" font-weight="700">2 / 32</text>
+<rect x="16" y="178" width="12" height="12" fill="#2a78d6" rx="2"/>
+<text x="34" y="188" font-size="11.5" fill="#333333">VYRA's design</text>
+<rect x="140" y="178" width="12" height="12" fill="#b0b0b0" rx="2"/>
+<text x="158" y="188" font-size="11.5" fill="#333333">comparison design</text>
+</svg>

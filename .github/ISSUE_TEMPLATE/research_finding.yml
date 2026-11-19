@@ -1,0 +1,40 @@
+name: Attack or research finding
+description: A new attack, a flaw in a construction or its analysis, or a claim the evidence does not support
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        VYRA is a research prototype with no security proof and no external review, so findings about its design are discussed in the open. Use the private process in SECURITY.md only for implementation flaws such as memory safety or side-channel leakage.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Hybrid KEM combiner
+        - Composite signatures
+        - Sealed box
+        - Wire format or encodings
+        - HQC port (vyra-hqc)
+        - Failure-injection experiment (method, games, controls)
+        - Paper or documentation claims
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: What is wrong or missing, and under which assumptions or failure pattern.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: An argument, a reference, or code. An attack that can be added to `crates/vyra-yield` is ideal.
+  - type: textarea
+    id: refs
+    attributes:
+      label: References
+      description: Papers, standards or drafts this relies on.

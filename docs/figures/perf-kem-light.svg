@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 462.6" width="880" height="462.6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Hybrid KEM speed: the code-based half sets the pace</title>
+<rect x="0.5" y="0.5" width="879" height="461.6" rx="10" fill="#fcfcfb" stroke="#e1e0d9"/>
+<text x="20" y="30" font-size="15" fill="#0b0b0b" font-weight="600">Hybrid KEM speed: the code-based half sets the pace</text>
+<text x="20" y="49" font-size="12" fill="#52514e">Median wall-clock time per operation, hybrid and each component measured separately (n = 200).</text>
+<rect x="150" y="68" width="12" height="12" fill="#b9b8af" rx="2"/>
+<text x="168" y="78.5" font-size="11.5" fill="#52514e">hybrid (VYRA-KEM)</text>
+<circle cx="293.8" cy="74" r="5" fill="#2a78d6"/>
+<text x="305.8" y="78.5" font-size="11.5" fill="#52514e">ML-KEM alone</text>
+<circle cx="403.4" cy="74" r="5" fill="#eb6834"/>
+<text x="415.4" y="78.5" font-size="11.5" fill="#52514e">HQC alone</text>
+<line x1="150" y1="96" x2="150" y2="356" stroke="#c3c2b7" stroke-width="1"/>
+<text x="150" y="371" font-size="10.5" fill="#898781" text-anchor="middle">0</text>
+<line x1="280" y1="96" x2="280" y2="356" stroke="#e1e0d9" stroke-width="1"/>
+<text x="280" y="371" font-size="10.5" fill="#898781" text-anchor="middle">1</text>
+<line x1="410" y1="96" x2="410" y2="356" stroke="#e1e0d9" stroke-width="1"/>
+<text x="410" y="371" font-size="10.5" fill="#898781" text-anchor="middle">2</text>
+<line x1="540" y1="96" x2="540" y2="356" stroke="#e1e0d9" stroke-width="1"/>
+<text x="540" y="371" font-size="10.5" fill="#898781" text-anchor="middle">3</text>
+<line x1="670" y1="96" x2="670" y2="356" stroke="#e1e0d9" stroke-width="1"/>
+<text x="670" y="371" font-size="10.5" fill="#898781" text-anchor="middle">4</text>
+<line x1="800" y1="96" x2="800" y2="356" stroke="#e1e0d9" stroke-width="1"/>
+<text x="800" y="371" font-size="10.5" fill="#898781" text-anchor="middle">5</text>
+<rect x="16" y="98" width="130" height="14" fill="#fcfcfb"/>
+<text x="16" y="110" font-size="11" fill="#898781" font-weight="600">VYRA-KEM-1</text>
+<text x="142" y="127" font-size="11.5" fill="#52514e" text-anchor="end">keygen</text>
+<path d="M150,116 H168.9 Q172.9,116 172.9,120 V126 Q172.9,130 168.9,130 H150 Z" fill="#b9b8af"/>
+<circle cx="156" cy="123" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="169.2" cy="123" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="182.2" y="127" font-size="11.5" fill="#0b0b0b">0.18 ms</text>
+<text x="142" y="149" font-size="11.5" fill="#52514e" text-anchor="end">encaps</text>
+<path d="M150,138 H192.7 Q196.7,138 196.7,142 V148 Q196.7,152 192.7,152 H150 Z" fill="#b9b8af"/>
+<circle cx="157.5" cy="145" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="188" cy="145" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="204.7" y="149" font-size="11.5" fill="#0b0b0b">0.36 ms</text>
+<text x="142" y="171" font-size="11.5" fill="#52514e" text-anchor="end">decaps</text>
+<path d="M150,160 H239.5 Q243.5,160 243.5,164 V170 Q243.5,174 239.5,174 H150 Z" fill="#b9b8af"/>
+<circle cx="165.2" cy="167" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="228.4" cy="167" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="251.5" y="171" font-size="11.5" fill="#0b0b0b">0.72 ms</text>
+<rect x="16" y="184" width="130" height="14" fill="#fcfcfb"/>
+<text x="16" y="196" font-size="11" fill="#898781" font-weight="600">VYRA-KEM-3</text>
+<text x="142" y="213" font-size="11.5" fill="#52514e" text-anchor="end">keygen</text>
+<path d="M150,202 H211.5 Q215.5,202 215.5,206 V212 Q215.5,216 211.5,216 H150 Z" fill="#b9b8af"/>
+<circle cx="160.2" cy="209" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="206.3" cy="209" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="223.5" y="213" font-size="11.5" fill="#0b0b0b">0.50 ms</text>
+<text x="142" y="235" font-size="11.5" fill="#52514e" text-anchor="end">encaps</text>
+<path d="M150,224 H278.8 Q282.8,224 282.8,228 V234 Q282.8,238 278.8,238 H150 Z" fill="#b9b8af"/>
+<circle cx="161.9" cy="231" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="264" cy="231" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="290.8" y="235" font-size="11.5" fill="#0b0b0b">1.02 ms</text>
+<text x="142" y="257" font-size="11.5" fill="#52514e" text-anchor="end">decaps</text>
+<path d="M150,246 H405.9 Q409.9,246 409.9,250 V256 Q409.9,260 405.9,260 H150 Z" fill="#b9b8af"/>
+<circle cx="171" cy="253" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="383" cy="253" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="417.9" y="257" font-size="11.5" fill="#0b0b0b">2.00 ms</text>
+<rect x="16" y="270" width="130" height="14" fill="#fcfcfb"/>
+<text x="16" y="282" font-size="11" fill="#898781" font-weight="600">VYRA-KEM-5</text>
+<text x="142" y="299" font-size="11.5" fill="#52514e" text-anchor="end">keygen</text>
+<path d="M150,288 H325.9 Q329.9,288 329.9,292 V298 Q329.9,302 325.9,302 H150 Z" fill="#b9b8af"/>
+<circle cx="160.7" cy="295" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="253.3" cy="295" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="337.9" y="299" font-size="11.5" fill="#0b0b0b">1.38 ms</text>
+<text x="142" y="321" font-size="11.5" fill="#52514e" text-anchor="end">encaps</text>
+<path d="M150,310 H382.1 Q386.1,310 386.1,314 V320 Q386.1,324 382.1,324 H150 Z" fill="#b9b8af"/>
+<circle cx="161.6" cy="317" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="358.3" cy="317" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="394.1" y="321" font-size="11.5" fill="#0b0b0b">1.82 ms</text>
+<text x="142" y="343" font-size="11.5" fill="#52514e" text-anchor="end">decaps</text>
+<path d="M150,332 H610.6 Q614.6,332 614.6,336 V342 Q614.6,346 610.6,346 H150 Z" fill="#b9b8af"/>
+<circle cx="173.2" cy="339" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="710" cy="339" r="5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="723" y="343" font-size="11.5" fill="#0b0b0b">3.57 ms</text>
+<text x="475" y="390" font-size="11" fill="#898781" text-anchor="middle">milliseconds (labels: hybrid median)</text>
+<text x="16" y="412" font-size="11" fill="#898781">One machine (13th Gen Intel(R) Core(TM) i9-13900K, windows x86_64), release build, wall-clock; not cycle-accurate and not a constant-time evaluation. Hybrid</text>
+<text x="16" y="426.9" font-size="11" fill="#898781">and components were timed in separate runs: where a component dot lies beyond its hybrid bar, that is run-to-run noise, not a faster hybrid. The HQC port is</text>
+<text x="16" y="441.7" font-size="11" fill="#898781">pure Rust without hardware carry-less multiplication.</text>
+</svg>

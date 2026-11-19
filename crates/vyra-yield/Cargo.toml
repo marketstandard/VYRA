@@ -1,0 +1,26 @@
+[package]
+name = "vyra-yield"
+description = "Falsification experiments for VYRA's hybrid combiner: deliberately broken components, explicit security games, executable attacks (research tool, intentionally insecure models)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+publish = false
+
+[dependencies]
+vyra-core.workspace = true
+vyra-kem = { path = "../vyra-kem", version = "0.1.0" }
+vyra-sig = { path = "../vyra-sig", version = "0.1.0" }
+sha3.workspace = true
+
+[[bin]]
+name = "yield-report"
+path = "src/bin/yield-report.rs"
+
+[lints]
+workspace = true

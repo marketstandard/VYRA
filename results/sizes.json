@@ -1,0 +1,328 @@
+{
+  "components": [
+    {
+      "ciphertext": 768,
+      "kind": "kem",
+      "level": 1,
+      "name": "ML-KEM-512",
+      "public_key": 800,
+      "secret_key": 64,
+      "shared_secret": 32
+    },
+    {
+      "ciphertext": 1088,
+      "kind": "kem",
+      "level": 3,
+      "name": "ML-KEM-768",
+      "public_key": 1184,
+      "secret_key": 64,
+      "shared_secret": 32
+    },
+    {
+      "ciphertext": 1568,
+      "kind": "kem",
+      "level": 5,
+      "name": "ML-KEM-1024",
+      "public_key": 1568,
+      "secret_key": 64,
+      "shared_secret": 32
+    },
+    {
+      "ciphertext": 4433,
+      "kind": "kem",
+      "level": 1,
+      "name": "HQC-128",
+      "public_key": 2241,
+      "secret_key": 32,
+      "shared_secret": 32
+    },
+    {
+      "ciphertext": 8978,
+      "kind": "kem",
+      "level": 3,
+      "name": "HQC-192",
+      "public_key": 4514,
+      "secret_key": 32,
+      "shared_secret": 32
+    },
+    {
+      "ciphertext": 14421,
+      "kind": "kem",
+      "level": 5,
+      "name": "HQC-256",
+      "public_key": 7237,
+      "secret_key": 32,
+      "shared_secret": 32
+    },
+    {
+      "kind": "signature",
+      "level": 2,
+      "name": "ML-DSA-44",
+      "public_key": 1312,
+      "secret_key": 32,
+      "signature": 2420
+    },
+    {
+      "kind": "signature",
+      "level": 3,
+      "name": "ML-DSA-65",
+      "public_key": 1952,
+      "secret_key": 32,
+      "signature": 3309
+    },
+    {
+      "kind": "signature",
+      "level": 5,
+      "name": "ML-DSA-87",
+      "public_key": 2592,
+      "secret_key": 32,
+      "signature": 4627
+    },
+    {
+      "kind": "signature",
+      "level": 1,
+      "name": "Ed25519",
+      "public_key": 32,
+      "secret_key": 32,
+      "signature": 64
+    },
+    {
+      "kind": "signature",
+      "level": 1,
+      "name": "SLH-DSA-SHAKE-128s",
+      "public_key": 32,
+      "secret_key": 48,
+      "signature": 7856
+    },
+    {
+      "kind": "signature",
+      "level": 3,
+      "name": "SLH-DSA-SHAKE-192s",
+      "public_key": 48,
+      "secret_key": 72,
+      "signature": 16224
+    },
+    {
+      "kind": "signature",
+      "level": 5,
+      "name": "SLH-DSA-SHAKE-256s",
+      "public_key": 64,
+      "secret_key": 96,
+      "signature": 29792
+    }
+  ],
+  "generator": "cargo xtask sizes",
+  "kem_suites": [
+    {
+      "components": [
+        "ML-KEM-512",
+        "HQC-128"
+      ],
+      "level": 1,
+      "raw": {
+        "ciphertext": 5201,
+        "public_key": 3041,
+        "secret_key": 96,
+        "shared_secret": 32
+      },
+      "suite": "VYRA-KEM-1",
+      "suite_id": 1,
+      "wire": {
+        "ciphertext": 5208,
+        "public_key": 3048,
+        "secret_key": 119
+      }
+    },
+    {
+      "components": [
+        "ML-KEM-768",
+        "HQC-192"
+      ],
+      "level": 3,
+      "raw": {
+        "ciphertext": 10066,
+        "public_key": 5698,
+        "secret_key": 96,
+        "shared_secret": 32
+      },
+      "suite": "VYRA-KEM-3",
+      "suite_id": 3,
+      "wire": {
+        "ciphertext": 10073,
+        "public_key": 5705,
+        "secret_key": 119
+      }
+    },
+    {
+      "components": [
+        "ML-KEM-1024",
+        "HQC-256"
+      ],
+      "level": 5,
+      "raw": {
+        "ciphertext": 15989,
+        "public_key": 8805,
+        "secret_key": 96,
+        "shared_secret": 32
+      },
+      "suite": "VYRA-KEM-5",
+      "suite_id": 5,
+      "wire": {
+        "ciphertext": 15996,
+        "public_key": 8812,
+        "secret_key": 119
+      }
+    }
+  ],
+  "note": "raw = algorithm encoding; wire = 7-byte VYRA header + raw. Every value is a code constant asserted equal to the length of a generated object.",
+  "seal_suites": [
+    {
+      "header": 7,
+      "kem_ciphertext": 5201,
+      "overhead": 5224,
+      "suite": "VYRA-KEM-1",
+      "suite_id": 1,
+      "tag": 16
+    },
+    {
+      "header": 7,
+      "kem_ciphertext": 10066,
+      "overhead": 10089,
+      "suite": "VYRA-KEM-3",
+      "suite_id": 3,
+      "tag": 16
+    },
+    {
+      "header": 7,
+      "kem_ciphertext": 15989,
+      "overhead": 16012,
+      "suite": "VYRA-KEM-5",
+      "suite_id": 5,
+      "tag": 16
+    }
+  ],
+  "sig_suites": [
+    {
+      "components": [
+        "ML-DSA-44",
+        "Ed25519"
+      ],
+      "family": "transition",
+      "level": 2,
+      "raw": {
+        "public_key": 1344,
+        "secret_key": 64,
+        "signature": 2484
+      },
+      "suite": "VYRA-SIG-2",
+      "suite_id": 2,
+      "wire": {
+        "public_key": 1351,
+        "secret_key": 87,
+        "signature": 2491
+      }
+    },
+    {
+      "components": [
+        "ML-DSA-65",
+        "Ed25519"
+      ],
+      "family": "transition",
+      "level": 3,
+      "raw": {
+        "public_key": 1984,
+        "secret_key": 64,
+        "signature": 3373
+      },
+      "suite": "VYRA-SIG-3",
+      "suite_id": 3,
+      "wire": {
+        "public_key": 1991,
+        "secret_key": 87,
+        "signature": 3380
+      }
+    },
+    {
+      "components": [
+        "ML-DSA-87",
+        "Ed25519"
+      ],
+      "family": "transition",
+      "level": 5,
+      "raw": {
+        "public_key": 2624,
+        "secret_key": 64,
+        "signature": 4691
+      },
+      "suite": "VYRA-SIG-5",
+      "suite_id": 5,
+      "wire": {
+        "public_key": 2631,
+        "secret_key": 87,
+        "signature": 4698
+      }
+    },
+    {
+      "components": [
+        "ML-DSA-44",
+        "SLH-DSA-SHAKE-128s"
+      ],
+      "family": "dual-pq",
+      "level": 1,
+      "raw": {
+        "public_key": 1344,
+        "secret_key": 80,
+        "signature": 10276
+      },
+      "suite": "VYRA-SIG-PQ1",
+      "suite_id": 17,
+      "wire": {
+        "public_key": 1351,
+        "secret_key": 103,
+        "signature": 10283
+      }
+    },
+    {
+      "components": [
+        "ML-DSA-65",
+        "SLH-DSA-SHAKE-192s"
+      ],
+      "family": "dual-pq",
+      "level": 3,
+      "raw": {
+        "public_key": 2000,
+        "secret_key": 104,
+        "signature": 19533
+      },
+      "suite": "VYRA-SIG-PQ3",
+      "suite_id": 19,
+      "wire": {
+        "public_key": 2007,
+        "secret_key": 127,
+        "signature": 19540
+      }
+    },
+    {
+      "components": [
+        "ML-DSA-87",
+        "SLH-DSA-SHAKE-256s"
+      ],
+      "family": "dual-pq",
+      "level": 5,
+      "raw": {
+        "public_key": 2656,
+        "secret_key": 128,
+        "signature": 34419
+      },
+      "suite": "VYRA-SIG-PQ5",
+      "suite_id": 21,
+      "wire": {
+        "public_key": 2663,
+        "secret_key": 151,
+        "signature": 34426
+      }
+    }
+  ],
+  "unit": "bytes",
+  "wire_header_len": 7
+}

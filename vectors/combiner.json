@@ -1,0 +1,94 @@
+{
+  "cross_check": "each output was computed with vyra_kem::combine and independently by hand-framing into SHA3-256 in xtask; both agreed",
+  "definition": "output = SHA3-256( frame(\"VYRA-KEM-v1\") || frame([suite_id]) || frame(ss1) || frame(ss2) || frame(ct1) || frame(ct2) || frame(pk1) || frame(pk2) ), frame(x) = u64_be(len(x)) || x (docs/DECISIONS.md D-01)",
+  "generator": "cargo xtask vectors",
+  "label": "565952412d4b454d2d7631",
+  "note": "inputs are deliberately small and not of real component lengths; combine() does not check lengths",
+  "title": "VYRA-KEM v1 combiner known-answer vectors",
+  "vectors": [
+    {
+      "ct1": "637431",
+      "ct2": "637432",
+      "index": 0,
+      "note": "baseline: 32-byte secrets 00..1f / 20..3f, short ASCII ct/pk",
+      "output": "cf6b053c9df197e2b94e568bcb69a4f639f4bef98001146e96e0b4617928d54c",
+      "pk1": "706b31",
+      "pk2": "706b32",
+      "ss1": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "ss2": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "suite_id": 1
+    },
+    {
+      "ct1": "637431",
+      "ct2": "637432",
+      "index": 1,
+      "note": "baseline with suite id 3 (suite binding)",
+      "output": "123a9c2446709892ef19dbd71e256f9e5479bebfa4ce7d5e363d24eeef938cda",
+      "pk1": "706b31",
+      "pk2": "706b32",
+      "ss1": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "ss2": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "suite_id": 3
+    },
+    {
+      "ct1": "637431",
+      "ct2": "637432",
+      "index": 2,
+      "note": "baseline with ss1 and ss2 swapped (order binding)",
+      "output": "4c3728a006d05c56cbb8db1ca21f1e6194c80bfa2b572a41306bda24b2706dde",
+      "pk1": "706b31",
+      "pk2": "706b32",
+      "ss1": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "ss2": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "suite_id": 1
+    },
+    {
+      "ct1": "",
+      "ct2": "",
+      "index": 3,
+      "note": "all fields empty, suite id 5",
+      "output": "f87b97a3159038131dddaebadc9523e11c7dfdbd6b5945ff577f7fa7a96ea514",
+      "pk1": "",
+      "pk2": "",
+      "ss1": "",
+      "ss2": "",
+      "suite_id": 5
+    },
+    {
+      "ct1": "6162",
+      "ct2": "63",
+      "index": 4,
+      "note": "framing: ct1 = \"ab\", ct2 = \"c\"",
+      "output": "a7843c5aa37af9a5c60ff0de19bddc02728361b69f82eff0c19f29c234ac8e56",
+      "pk1": "706b31",
+      "pk2": "706b32",
+      "ss1": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "ss2": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "suite_id": 1
+    },
+    {
+      "ct1": "61",
+      "ct2": "6263",
+      "index": 5,
+      "note": "framing: ct1 = \"a\", ct2 = \"bc\" (same concatenation, different key)",
+      "output": "ed0e8b3f460d25f79bac91d0e5105a7fd998572b2a328246e99c2558fe50f988",
+      "pk1": "706b31",
+      "pk2": "706b32",
+      "ss1": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "ss2": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "suite_id": 1
+    },
+    {
+      "ct1": "637431",
+      "ct2": "637432",
+      "index": 6,
+      "note": "baseline with pk2 changed in one bit (public-key binding)",
+      "output": "d5c61b91e1f3987643467ecd61012cfe16b3153e8d8e5ecf753b89fa2390e29a",
+      "pk1": "706b31",
+      "pk2": "706b33",
+      "ss1": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "ss2": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "suite_id": 1
+    }
+  ]
+}

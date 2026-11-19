@@ -1,0 +1,22 @@
+[package]
+name = "vyra"
+description = "VYRA research prototype: hybrid post-quantum KEM, composite signatures and sealed box (facade crate)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+vyra-core.workspace = true
+# vyra-kem, vyra-sig and vyra-seal are not listed in [workspace.dependencies]; path dependencies.
+vyra-kem = { path = "../vyra-kem", version = "0.1.0" }
+vyra-sig = { path = "../vyra-sig", version = "0.1.0" }
+vyra-seal = { path = "../vyra-seal", version = "0.1.0" }
+
+[lints]
+workspace = true

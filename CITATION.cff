@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use VYRA or its results in your work, please cite it as below."
+title: "VYRA: Testing Yielding Resistance in Hybrid Post-Quantum Constructions by Failure Injection"
+type: software
+authors:
+  - name: "Encryptic1"
+    affiliation: "Market Standard, LLC"
+  - given-names: "Trey"
+    family-names: "Huffine"
+    affiliation: "Market Standard, LLC"
+repository-code: "https://github.com/marketstandard/VYRA"
+url: "https://github.com/marketstandard/VYRA"
+abstract: >-
+  VYRA is a research-stage hybrid post-quantum cryptography library in Rust
+  (ML-KEM with HQC, ML-DSA with Ed25519 or SLH-DSA) together with a
+  failure-injection experiment that deliberately breaks one component and
+  attacks the combined scheme. It is a research prototype and is not for
+  protecting real data.
+keywords:
+  - post-quantum cryptography
+  - hybrid KEM
+  - composite signatures
+  - KEM combiner
+  - failure injection
+  - ML-KEM
+  - HQC
+  - ML-DSA
+  - SLH-DSA
+  - Rust
+license: "MIT OR Apache-2.0"
+version: "0.1.0"
+date-released: "2026-11-19"

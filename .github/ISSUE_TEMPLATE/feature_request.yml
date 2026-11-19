@@ -1,0 +1,20 @@
+name: Feature or improvement
+description: A suggestion for the library, the CLI, the experiment, the tooling or the docs
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this make possible
+      description: The problem or the research question behind the request.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What you would change. Note that VYRA does not add new cryptographic primitives or constructions of its own invention.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

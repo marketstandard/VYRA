@@ -1,0 +1,14 @@
+VYRA
+Copyright 2026 Market Standard, LLC
+
+VYRA was written by Encryptic1 and Trey Huffine at Market Standard, LLC,
+and is licensed under either the MIT License (LICENSE-MIT) or the Apache
+License, Version 2.0 (LICENSE-APACHE), at your option.
+
+Third-party code
+
+crates/vyra-hqc is derived from hqc-kem 0.1.0-rc.0 by the RustCrypto
+Developers (MIT OR Apache-2.0), with portions adapted from NicsTr/hqc-kem
+(MIT, Copyright (c) 2026 Nics). Its origin, licence and the changes made to
+it are recorded in crates/vyra-hqc/NOTICE.md, and its own licence files are
+in crates/vyra-hqc/.

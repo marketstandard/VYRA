@@ -1,0 +1,27 @@
+[package]
+name = "vyra-proofs"
+description = "Bounded model checking harnesses (Kani) for the VYRA-original encodings in vyra-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+publish = false
+
+[dependencies]
+vyra-core.workspace = true
+# Only for the pending signature message-representative harness (P6); off by
+# default. Enable with `--features sig` once vyra-sig exposes
+# `message_representative_with_digest`.
+vyra-sig = { path = "../vyra-sig", optional = true }
+
+[features]
+default = []
+sig = ["dep:vyra-sig"]
+
+[lints]
+workspace = true

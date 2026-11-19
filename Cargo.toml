@@ -1,0 +1,55 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "xtask"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.88"
+authors = ["Encryptic1", "Trey Huffine", "Market Standard, LLC"]
+repository = "https://github.com/marketstandard/VYRA"
+homepage = "https://github.com/marketstandard/VYRA"
+keywords = ["post-quantum", "hybrid", "kem", "signature", "cryptography"]
+categories = ["cryptography"]
+
+[workspace.dependencies]
+# VYRA crates
+vyra-core = { path = "crates/vyra-core", version = "0.1.0" }
+
+# Primitives used by vyra-core
+getrandom = "0.4.3"
+rand_core = "0.10.1"
+sha3 = { version = "0.12.0", features = ["zeroize"] }
+shake = { version = "0.1.0", features = ["zeroize"] }
+subtle = "2.6.1"
+zeroize = "1.9.2"
+
+# Upstream component crates (all on rand_core 0.10; see vyra_core::rng)
+ml-kem = "0.3.4"
+ml-dsa = "0.1.2"
+ed25519-dalek = "3.0.0"
+
+# Test-only
+proptest = "1.12.0"
+
+[workspace.lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(kani)'] }
+unsafe_code = "forbid"
+missing_docs = "deny"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+indexing_slicing = "deny"
+
+# The HQC arithmetic is far too slow unoptimised for the test suite; optimise
+# just that crate in dev/test builds (debug assertions and overflow checks stay on).
+[profile.dev.package.vyra-hqc]
+opt-level = 3
+
+# Hash-heavy dependencies (SHA-3, SLH-DSA, ML-DSA) are too slow unoptimised for the
+# test suite; optimise third-party dependencies in dev/test builds.
+[profile.dev.package."*"]
+opt-level = 2

@@ -1,0 +1,7 @@
+STATUS: RESEARCH PROTOTYPE. NOT FOR PROTECTING REAL DATA.
+VYRA has had no independent cryptanalysis and no external security review.
+Its hybrid constructions, encodings and wire formats are VYRA-original and
+unanalysed. HQC follows the v5.1 specification through an in-tree port; it is
+not yet a published standard. Timing behaviour of the component
+implementations has not been rigorously measured. Use it to study hybrid
+post-quantum designs, not to protect real data.

@@ -1,0 +1,49 @@
+[package]
+name = "vyra-sig"
+description = "Composite signatures for VYRA: ML-DSA + Ed25519 (transition) and ML-DSA + SLH-DSA (dual post-quantum)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+vyra-core.workspace = true
+ml-dsa = { workspace = true, features = ["rand_core", "zeroize"] }
+# `digest`: Ed25519ph (RFC 8032 §5.1, SHA-512 prehash with context) for the
+# composite half; see src/ed25519.rs.
+ed25519-dalek = { workspace = true, features = ["zeroize", "digest"] }
+# SLH-DSA (FIPS 205). Exact pin: chosen after reproducing the NIST ACVP vectors
+# (see src/slhdsa.rs); a version move must re-run that evaluation. No OS RNG
+# (`default-rng` off): randomness comes only from vyra_core::EntropySource.
+fips205 = { version = "=0.5.0", default-features = false, features = ["slh-dsa-shake-128s", "slh-dsa-shake-192s", "slh-dsa-shake-256s"] }
+zeroize.workspace = true
+subtle.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+# Independent second ML-DSA implementation, for differential conformance tests only.
+fips204 = { version = "0.5.0", default-features = false, features = ["ml-dsa-44", "ml-dsa-65", "ml-dsa-87"] }
+# Independent second SLH-DSA implementation (RustCrypto, release candidate), for
+# differential conformance tests only. Default features: its `alloc` feature
+# does not compile without `pkcs8/alloc`.
+slh-dsa = "=0.2.0-rc.5"
+# Reading the NIST ACVP keyGen vectors (gzip JSON) in tests only.
+flate2 = "1.1.9"
+serde_json = "1.0.151"
+hex = "0.4.3"
+# Recomputing the public-key digest by hand in tests.
+sha3.workspace = true
+# Constructing mixed-order test points (EIGHT_TORSION); pinned to the version
+# ed25519-dalek already locks, so Cargo.lock gains no new package.
+curve25519-dalek = { version = "=5.0.0", default-features = false }
+# `hazmat::raw_sign` lets a test sign under a mixed-order public key, to show
+# that plain `verify_strict` accepts such signatures while VYRA does not.
+ed25519-dalek = { workspace = true, features = ["hazmat", "digest"] }
+
+[lints]
+workspace = true

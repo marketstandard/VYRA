@@ -1,0 +1,44 @@
+name: Bug report
+description: Something builds, runs or verifies incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. If this is a security problem (wrong cryptographic behaviour, memory safety, side-channel leakage), do not file it here: follow SECURITY.md instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands, and the smallest code sample that shows the problem.
+      render: sh
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: The error or the failing gate output, as text.
+      render: text
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Output of `git rev-parse HEAD`.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Operating system and the output of `rustc -V`.
+      placeholder: "Ubuntu 24.04, rustc 1.100.0"
+    validations:
+      required: true

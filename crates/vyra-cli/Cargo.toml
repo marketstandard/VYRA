@@ -1,0 +1,25 @@
+[package]
+name = "vyra-cli"
+description = "Command-line tool for the VYRA research prototype (hybrid post-quantum KEM, composite signatures, sealed box)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[[bin]]
+name = "vyra"
+path = "src/main.rs"
+# The binary has no API to document, and its name would collide with the
+# `vyra` library's documentation output.
+doc = false
+
+[dependencies]
+vyra = { path = "../vyra", version = "0.1.0" }
+
+[lints]
+workspace = true

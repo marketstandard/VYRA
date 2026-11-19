@@ -1,0 +1,47 @@
+[package]
+name = "vyra-hqc"
+description = "HQC-KEM v5.1 (HQC-1/3/5) in pure Rust: an in-tree port of hqc-kem 0.1.0-rc.0 to the HQC v5.1 specification"
+version.workspace = true
+edition.workspace = true
+# Inherited from hqc-kem 0.1.0-rc.0 (MIT OR Apache-2.0); see NOTICE.md.
+license = "MIT OR Apache-2.0"
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[features]
+default = ["kgen", "ecap", "dcap", "std"]
+std = ["alloc"]
+alloc = []
+kgen = []
+ecap = []
+dcap = []
+# Use the bit-serial carry-less word multiply instead of the integer-multiply
+# kernel, for targets whose integer multiplier is not constant time (see
+# NOTICE.md, "Constant-time notes").
+bitserial-mul = []
+
+[dependencies]
+ctutils = { version = "0.4", default-features = false }
+rand_core.workspace = true
+sha3.workspace = true
+shake.workspace = true
+subtle.workspace = true
+thiserror = { version = "2", default-features = false }
+zeroize = { workspace = true, features = ["derive"] }
+
+[dev-dependencies]
+# NIST AES-256 CTR DRBG of the reference KAT generator (tests only).
+aes = "0.9"
+sha2 = "0.11"
+vyra-core.workspace = true
+
+# The workspace lints apply. `clippy::indexing_slicing` is allowed in source,
+# per module, in the seven forked arithmetic modules only (kem, pke, poly,
+# code, reed_solomon, reed_muller, sampling): they index fixed-size buffers
+# throughout, and rewriting them would risk their constant-time structure.
+# See NOTICE.md ("Lints relaxed").
+[lints]
+workspace = true

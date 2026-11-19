@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 541.7" width="880" height="541.7" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>What the second component costs in bytes</title>
+<rect x="0.5" y="0.5" width="879" height="540.7" rx="10" fill="#fcfcfb" stroke="#e1e0d9"/>
+<text x="20" y="30" font-size="15" fill="#0b0b0b" font-weight="600">What the second component costs in bytes</text>
+<text x="20" y="49" font-size="12" fill="#52514e">Raw encoded sizes; each bar is one object, split into its two components.</text>
+<rect x="128" y="68" width="12" height="12" fill="#2a78d6" rx="2"/>
+<text x="146" y="78.5" font-size="11.5" fill="#52514e">lattice component (ML-KEM or ML-DSA)</text>
+<rect x="372.9" y="68" width="12" height="12" fill="#eb6834" rx="2"/>
+<text x="390.9" y="78.5" font-size="11.5" fill="#52514e">second component (HQC, Ed25519 or SLH-DSA)</text>
+<line x1="128" y1="94" x2="128" y2="450" stroke="#c3c2b7" stroke-width="1"/>
+<text x="128" y="465" font-size="10.5" fill="#898781" text-anchor="middle">0</text>
+<line x1="292.5" y1="94" x2="292.5" y2="450" stroke="#e1e0d9" stroke-width="1"/>
+<text x="292.5" y="465" font-size="10.5" fill="#898781" text-anchor="middle">10K</text>
+<line x1="457" y1="94" x2="457" y2="450" stroke="#e1e0d9" stroke-width="1"/>
+<text x="457" y="465" font-size="10.5" fill="#898781" text-anchor="middle">20K</text>
+<line x1="621.5" y1="94" x2="621.5" y2="450" stroke="#e1e0d9" stroke-width="1"/>
+<text x="621.5" y="465" font-size="10.5" fill="#898781" text-anchor="middle">30K</text>
+<line x1="786" y1="94" x2="786" y2="450" stroke="#e1e0d9" stroke-width="1"/>
+<text x="786" y="465" font-size="10.5" fill="#898781" text-anchor="middle">40K</text>
+<rect x="16" y="96" width="108" height="16" fill="#fcfcfb"/>
+<text x="16" y="109" font-size="11" fill="#898781" font-weight="600">KEM public key</text>
+<text x="120" y="127" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-1</text>
+<rect x="128" y="116" width="12.2" height="14" fill="#2a78d6"/>
+<path d="M142.2,116 H174 Q178,116 178,120 V126 Q178,130 174,130 H142.2 Z" fill="#eb6834"/>
+<text x="185" y="127" font-size="11.5" fill="#0b0b0b">3,041</text>
+<text x="120" y="149" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-3</text>
+<rect x="128" y="138" width="18.5" height="14" fill="#2a78d6"/>
+<path d="M148.5,138 H217.7 Q221.7,138 221.7,142 V148 Q221.7,152 217.7,152 H148.5 Z" fill="#eb6834"/>
+<text x="228.7" y="149" font-size="11.5" fill="#0b0b0b">5,698</text>
+<text x="120" y="171" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-5</text>
+<rect x="128" y="160" width="24.8" height="14" fill="#2a78d6"/>
+<path d="M154.8,160 H268.8 Q272.8,160 272.8,164 V170 Q272.8,174 268.8,174 H154.8 Z" fill="#eb6834"/>
+<text x="279.8" y="171" font-size="11.5" fill="#0b0b0b">8,805</text>
+<rect x="16" y="184" width="108" height="16" fill="#fcfcfb"/>
+<text x="16" y="197" font-size="11" fill="#898781" font-weight="600">KEM ciphertext</text>
+<text x="120" y="215" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-1</text>
+<rect x="128" y="204" width="11.6" height="14" fill="#2a78d6"/>
+<path d="M141.6,204 H209.6 Q213.6,204 213.6,208 V214 Q213.6,218 209.6,218 H141.6 Z" fill="#eb6834"/>
+<text x="220.6" y="215" font-size="11.5" fill="#0b0b0b">5,201</text>
+<text x="120" y="237" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-3</text>
+<rect x="128" y="226" width="16.9" height="14" fill="#2a78d6"/>
+<path d="M146.9,226 H289.6 Q293.6,226 293.6,230 V236 Q293.6,240 289.6,240 H146.9 Z" fill="#eb6834"/>
+<text x="300.6" y="237" font-size="11.5" fill="#0b0b0b">10,066</text>
+<text x="120" y="259" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-KEM-5</text>
+<rect x="128" y="248" width="24.8" height="14" fill="#2a78d6"/>
+<path d="M154.8,248 H387 Q391,248 391,252 V258 Q391,262 387,262 H154.8 Z" fill="#eb6834"/>
+<text x="398" y="259" font-size="11.5" fill="#0b0b0b">15,989</text>
+<rect x="16" y="272" width="108" height="16" fill="#fcfcfb"/>
+<text x="16" y="285" font-size="11" fill="#898781" font-weight="600">Signature, transition suites (ML-DSA + Ed25519)</text>
+<text x="120" y="303" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-2</text>
+<rect x="128" y="292" width="38.8" height="14" fill="#2a78d6"/>
+<rect x="168.8" y="292" width="0.1" height="14" fill="#eb6834"/>
+<text x="175.9" y="303" font-size="11.5" fill="#0b0b0b">2,484</text>
+<text x="120" y="325" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-3</text>
+<rect x="128" y="314" width="53.4" height="14" fill="#2a78d6"/>
+<rect x="183.4" y="314" width="0.1" height="14" fill="#eb6834"/>
+<text x="190.5" y="325" font-size="11.5" fill="#0b0b0b">3,373</text>
+<text x="120" y="347" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-5</text>
+<rect x="128" y="336" width="75.1" height="14" fill="#2a78d6"/>
+<rect x="205.1" y="336" width="0.1" height="14" fill="#eb6834"/>
+<text x="212.2" y="347" font-size="11.5" fill="#0b0b0b">4,691</text>
+<rect x="16" y="360" width="108" height="16" fill="#fcfcfb"/>
+<text x="16" y="373" font-size="11" fill="#898781" font-weight="600">Signature, dual post-quantum suites (ML-DSA + SLH-DSA)</text>
+<text x="120" y="391" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-PQ1</text>
+<rect x="128" y="380" width="38.8" height="14" fill="#2a78d6"/>
+<path d="M168.8,380 H293 Q297,380 297,384 V390 Q297,394 293,394 H168.8 Z" fill="#eb6834"/>
+<text x="304" y="391" font-size="11.5" fill="#0b0b0b">10,276</text>
+<text x="120" y="413" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-PQ3</text>
+<rect x="128" y="402" width="53.4" height="14" fill="#2a78d6"/>
+<path d="M183.4,402 H445.3 Q449.3,402 449.3,406 V412 Q449.3,416 445.3,416 H183.4 Z" fill="#eb6834"/>
+<text x="456.3" y="413" font-size="11.5" fill="#0b0b0b">19,533</text>
+<text x="120" y="435" font-size="11.5" fill="#52514e" text-anchor="end">VYRA-SIG-PQ5</text>
+<rect x="128" y="424" width="75.1" height="14" fill="#2a78d6"/>
+<path d="M205.1,424 H690.2 Q694.2,424 694.2,428 V434 Q694.2,438 690.2,438 H205.1 Z" fill="#eb6834"/>
+<text x="701.2" y="435" font-size="11.5" fill="#0b0b0b">34,419</text>
+<text x="457" y="484" font-size="11" fill="#898781" text-anchor="middle">bytes (raw encoding; the wire format adds a 7-byte header)</text>
+<text x="16" y="506" font-size="11" fill="#898781">HQC accounts for most of every KEM object, and SLH-DSA for most of every dual post-quantum signature. In the transition suites the Ed25519 half is 64 bytes,</text>
+<text x="16" y="520.9" font-size="11" fill="#898781">too thin to see at this scale.</text>
+</svg>

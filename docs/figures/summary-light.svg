@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320.6" width="880" height="320.6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Broken squares when exactly one component has failed</title>
+<rect x="0.5" y="0.5" width="879" height="319.6" rx="10" fill="#fcfcfb" stroke="#e1e0d9"/>
+<text x="20" y="30" font-size="15" fill="#0b0b0b" font-weight="600">Broken squares when exactly one component has failed</text>
+<text x="20" y="49" font-size="12" fill="#52514e">Share of (failure pattern × game) squares in which some coded attacker won. Lower is better.</text>
+<text x="16" y="80" font-size="12.5" fill="#0b0b0b" font-weight="600">KEM</text>
+<text x="16" y="96" font-size="11" fill="#52514e">ML-KEM-512 + HQC-128</text>
+<line x1="94" y1="110" x2="94" y2="228" stroke="#c3c2b7" stroke-width="1"/>
+<text x="86" y="125" font-size="11.5" fill="#52514e" text-anchor="end">Naive</text>
+<path d="M94,114 H131.6 Q135.6,114 135.6,118 V124 Q135.6,128 131.6,128 H94 Z" fill="#b9b8af"/>
+<text x="142.6" y="125" font-size="11.5" fill="#52514e">28 / 70</text>
+<text x="86" y="149" font-size="11.5" fill="#52514e" text-anchor="end">Xor</text>
+<path d="M94,138 H140.5 Q144.5,138 144.5,142 V148 Q144.5,152 140.5,152 H94 Z" fill="#b9b8af"/>
+<text x="151.5" y="149" font-size="11.5" fill="#52514e">34 / 70</text>
+<text x="86" y="173" font-size="11.5" fill="#52514e" text-anchor="end">CtBound</text>
+<path d="M94,162 H95.9 Q99.9,162 99.9,166 V172 Q99.9,176 95.9,176 H94 Z" fill="#b9b8af"/>
+<text x="106.9" y="173" font-size="11.5" fill="#52514e">4 / 70</text>
+<text x="86" y="197" font-size="11.5" fill="#52514e" text-anchor="end">XWingStyle</text>
+<path d="M94,186 H110.8 Q114.8,186 114.8,190 V196 Q114.8,200 110.8,200 H94 Z" fill="#b9b8af"/>
+<text x="121.8" y="197" font-size="11.5" fill="#52514e">14 / 70</text>
+<text x="86" y="221" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="700">VYRA</text>
+<text x="101" y="221" font-size="11.5" fill="#0b0b0b" font-weight="700">0 / 70</text>
+<text x="306" y="80" font-size="12.5" fill="#0b0b0b" font-weight="600">Signatures, transition</text>
+<text x="306" y="96" font-size="11" fill="#52514e">ML-DSA-44 + Ed25519</text>
+<line x1="384" y1="110" x2="384" y2="228" stroke="#c3c2b7" stroke-width="1"/>
+<text x="376" y="125" font-size="11.5" fill="#52514e" text-anchor="end">Concat</text>
+<path d="M384,114 H444.7 Q448.7,114 448.7,118 V124 Q448.7,128 444.7,128 H384 Z" fill="#b9b8af"/>
+<text x="455.7" y="125" font-size="11.5" fill="#52514e">56 / 90</text>
+<text x="376" y="149" font-size="11.5" fill="#52514e" text-anchor="end">ConcatCtx</text>
+<path d="M384,138 H421.6 Q425.6,138 425.6,142 V148 Q425.6,152 421.6,152 H384 Z" fill="#b9b8af"/>
+<text x="432.6" y="149" font-size="11.5" fill="#52514e">36 / 90</text>
+<text x="376" y="173" font-size="11.5" fill="#52514e" text-anchor="end">Either</text>
+<path d="M384,162 H406.6 Q410.6,162 410.6,166 V172 Q410.6,176 406.6,176 H384 Z" fill="#b9b8af"/>
+<text x="417.6" y="173" font-size="11.5" fill="#52514e">23 / 90</text>
+<text x="376" y="197" font-size="11.5" fill="#52514e" text-anchor="end">VyraPureEd</text>
+<path d="M384,186 H398.5 Q402.5,186 402.5,190 V196 Q402.5,200 398.5,200 H384 Z" fill="#b9b8af"/>
+<text x="409.5" y="197" font-size="11.5" fill="#52514e">16 / 90</text>
+<text x="376" y="221" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="700">VYRA</text>
+<path d="M384,210 H386.9 Q390.9,210 390.9,214 V220 Q390.9,224 386.9,224 H384 Z" fill="#2a78d6"/>
+<text x="397.9" y="221" font-size="11.5" fill="#0b0b0b" font-weight="700">6 / 90</text>
+<text x="596" y="80" font-size="12.5" fill="#0b0b0b" font-weight="600">Signatures, dual post-quantum</text>
+<text x="596" y="96" font-size="11" fill="#52514e">ML-DSA-44 + SLH-DSA-SHAKE-128s</text>
+<line x1="674" y1="110" x2="674" y2="156" stroke="#c3c2b7" stroke-width="1"/>
+<text x="666" y="125" font-size="11.5" fill="#52514e" text-anchor="end">Concat</text>
+<path d="M674,114 H735 Q739,114 739,118 V124 Q739,128 735,128 H674 Z" fill="#b9b8af"/>
+<text x="746" y="125" font-size="11.5" fill="#52514e">20 / 32</text>
+<text x="666" y="149" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="700">VYRA</text>
+<path d="M674,138 H676.5 Q680.5,138 680.5,142 V148 Q680.5,152 676.5,152 H674 Z" fill="#2a78d6"/>
+<text x="687.5" y="149" font-size="11.5" fill="#0b0b0b" font-weight="700">2 / 32</text>
+<rect x="16" y="238" width="12" height="12" fill="#2a78d6" rx="2"/>
+<text x="34" y="248" font-size="11.5" fill="#52514e">VYRA's design</text>
+<rect x="140" y="238" width="12" height="12" fill="#b9b8af" rx="2"/>
+<text x="158" y="248" font-size="11.5" fill="#52514e">comparison design</text>
+<text x="16" y="270" font-size="11" fill="#898781">VYRA's 6 broken transition squares are 4 strong-unforgeability (SUF-CMA) squares, a gap stated before the run, and 2 where the failed component ignores its</text>
+<text x="16" y="284.9" font-size="11" fill="#898781">context. VyraPureEd is VYRA's own earlier signature design, kept as a control. The dual post-quantum pair ran with 12 trials per cell, so its row is weak</text>
+<text x="16" y="299.7" font-size="11" fill="#898781">evidence.</text>
+</svg>

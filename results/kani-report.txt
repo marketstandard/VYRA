@@ -1,0 +1,3822 @@
+# VYRA Kani report
+date (UTC):   2026-11-19T07:28:08Z
+kani:         Kani Rust Verifier 0.68.0 (cargo plugin)
+cbmc:         6.11.0 (cbmc-6.11.0)
+solver:       CaDiCaL (Kani default; no harness overrides it)
+rustc (host): rustc 1.100.0 (0ef1bc386 2026-11-09)
+uname:        Linux 6.18.58.1-microsoft-standard-WSL2 x86_64, 32 CPUs
+settings:     HARNESS_TIMEOUT=1200s KANI_JOBS=8
+
+===== harness wire_decode_exact: SUCCESSFUL (5s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compilingwarning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+ vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (1)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.78s
+Thread 6: Checking harness wire::wire_decode_exact...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 431 failed (4 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7007918s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness wire_reader_ops: SUCCESSFUL (30s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (1)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.65s
+Thread 6: Checking harness wire::wire_reader_ops...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 323 failed (3 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 28.222021s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness wire_round_trip: SUCCESSFUL (14s wall, 17 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (2)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.01s
+Thread 6: Checking harness wire::wire_round_trip_p13...
+Thread 3: Checking harness wire::wire_round_trip_p7...
+Thread 7: Checking harness wire::wire_round_trip_p12...
+Thread 4: Checking harness wire::wire_round_trip_p0...
+Thread 1: Checking harness wire::wire_round_trip_p2...
+Thread 5: Checking harness wire::wire_round_trip_p9...
+Thread 2: Checking harness wire::wire_round_trip_p6...
+Thread 0: Checking harness wire::wire_round_trip_p5...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.330791s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.3762724s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.3948314s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5101027s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5878122s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.6028876s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.6674428s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.8884528s
+
+Thread 4: Checking harness wire::wire_round_trip_p14...
+Thread 0: Checking harness wire::wire_round_trip_p10...
+Thread 1: Checking harness wire::wire_round_trip_p15...
+Thread 3: Checking harness wire::wire_round_trip_p8...
+Thread 2: Checking harness wire::wire_round_trip_p4...
+Thread 5: Checking harness wire::wire_round_trip_p1...
+Thread 7: Checking harness wire::wire_round_trip_p11...
+Thread 6: Checking harness wire::wire_round_trip_p3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5503879s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.632038s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.467756s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.7210453s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5956821s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.851383s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.7367754s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.9931092s
+
+Thread 0: Checking harness wire::wire_round_trip_p16...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 700 failed (8 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.007968s
+
+Manual Harness Summary:
+Complete - 17 successfully verified harnesses, 0 failures, 17 total.
+
+===== harness wire_header_rejection: SUCCESSFUL (2s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (1)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.77s
+Thread 0: Checking harness wire::wire_header_rejection...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 218 failed (6 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 0.58065516s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness transcript_prefix_inverse: SUCCESSFUL (2s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (1)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.63s
+Thread 0: Checking harness transcript::transcript_prefix_inverse...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 63 failed
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 0.12873843s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness transcript_single_frame: SUCCESSFUL (45s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (2)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.66s
+Thread 6: Checking harness transcript::transcript_single_frame...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 395 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 43.953445s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness transcript_framing_shape: SUCCESSFUL (374s wall, 340 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (2)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 43.87s
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f1_2_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f1_1_2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f2_2...
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_2_3...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f1_1_0...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f1_1_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f2_2_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f3_3_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4428387s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.254357s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.467262s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.456051s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.589281s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7920737s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f2_2_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f0_2_0...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f1_0_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f2_0_2...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_2_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.052738s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.552446s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.881157s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5723443s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f...
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f1_1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7182403s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.9602637s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f1_2_2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f0_1_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_2...
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f1_1_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.9711297s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.7225437s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.539712s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (15 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.2585344s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f3_2_3...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0370107s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f2_2...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3831644s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f3_2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f2_1_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f2_2_2...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f0_3_2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.008326s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.020354s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.241614s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.327377s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0402203s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f0_3_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f2_3...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.0909243s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.9220133s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f3_1_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_0_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_2_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f0_0_1...
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f2_0_1...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8671925s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.976969s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6427956s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3765254s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6704693s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.494232s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0_1_3...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f3_0_3...
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.018433s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.256579s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_1_2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f1_1_2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f2_3_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f2_2_1...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f2_2_2...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.694449s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7822719s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2110844s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4027457s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f1_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f0_2_3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8589725s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5639153s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.421388s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f2_3...
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f1_3_1...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f1_3...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f3_3_2...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (15 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 0.93114483s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.55519s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8975449s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2591815s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f3_3_1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.959732s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f0_3_0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3487258s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f2_1...
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f2_2_2...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.491832s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l1_f1_0_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f0_1_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.009032s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_0_3...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5019841s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.749896s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f0_1_3...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6131573s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f3_2_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_1_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.292309s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f2_1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.558897s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f1_2_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2514234s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f3_3_2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.4863405s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f0_1_2...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1088405s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5303974s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.1545527s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f2_0_3...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.32654s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f1_3...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f0_0...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6354795s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0483913s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.658412s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5745344s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f3_1...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f0_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2203712s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.731147s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f1_3_2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f1_2...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f3_2_0...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f3_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2399502s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.14308s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.9082565s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3401663s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f0_0_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_0_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6234493s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5347023s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f0_0_2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f3_0_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.780926s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l1_f2_3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f1_3_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f1_2_3...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.773451s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3868423s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.149221s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.433147s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f1_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.35976s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f1_3_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f3_2_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f2_2_3...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4106727s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f3_1_1...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.3493s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4558463s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f2_1_0...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.423483s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.401013s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3812337s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5642796s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f1_1_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f3_2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f2_3_0...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.385877s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f3_2...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.0666075s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f1_1_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f3_3_2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9461915s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.782318s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2290616s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f2_1_3...
+Thread 7: Checking harness transcript::transcript_framing_shape_l1_f2_1_1...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.36306s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f3_0_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.3971105s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.656497s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.4651914s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f1_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.291772s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f1_3_2...
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f3_3_3...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f3_2_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7249565s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f1_1_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.612769s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5322366s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5948858s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f3_0_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f3_1_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0248675s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9536548s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.954235s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (15 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 1.1196907s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f3_1_3...
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1278963s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f3_1_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f0_3_2...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.568225s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.010514s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f2_3_1...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f1_3...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6009433s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f2_1_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4875693s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6985784s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.116812s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f0_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.106708s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f1_0_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f2_3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.368051s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f3_0_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3877807s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f0_3_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2003493s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.222919s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f2_3_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f2_3_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3991716s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f3_2_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.229838s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.3889694s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.117131s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f2_0_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.305542s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f3_2_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_0_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f2_1_1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5680313s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f3_0_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.331345s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.437249s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f0_3_3...
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f0_0_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2829413s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.369243s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f3_3_1...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.104264s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.309053s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2730193s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.56686s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.246993s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.8492033s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f1_3_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f0_2_3...
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f3_0_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.075602s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f0_3_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f0_1_2...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f1_0...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.654299s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f3_3...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9826038s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.708113s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7518296s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.652306s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.802472s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.39438s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f2_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f3_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f3_2_2...
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f0_0_0...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2898755s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.2593334s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.059722s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.1959512s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f1_1_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.4471924s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.6475744s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f0_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f3_0...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.541512s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f3_2_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f3_2_2...
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f1_3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.381314s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l1_f2_3_3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.189071s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.632958s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.256341s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f2_2_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f2_2_1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.2925825s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.81421s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.484525s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.914442s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f3_0_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.441587s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f2_2...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.9279795s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f2_3_0...
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f1_2...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0_3_2...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8811045s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f0_0_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f3...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0411344s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.780796s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.41628s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f0_3_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f2_2_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.857356s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.57697s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.695044s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f3_1_2...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f2_1_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.199389s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f3_0_1...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.776004s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7560177s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f2_1_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f3_1_0...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f1_2_0...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.364273s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3568983s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.275882s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f1_3_2...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2135983s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f1_2_2...
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f0_1_1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.309273s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f0_2_2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f2_3_1...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.990579s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1804304s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9161396s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f1_0_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.343338s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f2_2_0...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.903992s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.080331s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.132078s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f0_3_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f1_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5259094s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f3_1_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f3_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f3_2_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f3_1_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0091467s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5930684s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f0_2_0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7571602s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f2_1_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7748365s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f0_0_3...
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f2_0_2...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.116263s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.927138s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f1_2_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 11.082098s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.514821s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.3210373s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_2_1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.439919s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f3_0_2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.362273s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f2_1_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f0_1_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f3_2_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f0_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5862126s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.9020195s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.255881s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_2_0...
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f1_2_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.189024s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0103793s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4660091s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f2_1_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5975986s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_3_1...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f3_3_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f0_3_2...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f1_1_2...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.396491s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.443602s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f2_1_0...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4902296s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f0_2_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.016288s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0577264s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0374084s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f2_3_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8764896s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.4811597s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f0_0_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f1_0_3...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f0_2_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f0_0...
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f2_0_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.016051s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3301845s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f0_1_3...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8965871s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.023537s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.8847213s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f1_1_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f2_3_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f0_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.324975s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.201305s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.6370633s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f2_0_3...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.457189s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.630916s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5597615s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6894464s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.05953s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f0_2_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f0_3_3...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f0_2...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f0_0_2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f3_3_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f0_1_2...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5493975s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4676871s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.416074s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f1_3_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4218354s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f0_1_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8995695s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f1_3_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l0_f0_0_2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f1_2_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5208926s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.068424s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.658188s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.454987s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.502973s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.741984s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f1_0_0...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1656833s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f2_3_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f1_0_0...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f1_2_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f2_0_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.733386s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f1_3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f3_3_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f1_2_2...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2545657s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6992805s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_1_0...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f0_0...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5332985s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.24213s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.146148s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.162589s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f1_0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.643383s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f1_2_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f1_3_3...
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f1_1_3...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.611277s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f0_3...
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f3_2_1...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.318084s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2229404s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2247772s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5479856s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f3_3_0...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 10.443427s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 11.075196s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.61346s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f2_0_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f1_0_3...
+Thread 7: Checking harness transcript::transcript_framing_shape_l1_f3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.847934s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f1_1_3...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f2_0_2...
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f0_0_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f3_0_1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.6424193s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.168671s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f2_0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3126116s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9422557s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.564482s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8785276s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f3_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f0_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.8382196s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f1_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f3_0_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f1_3_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f0_1_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.1464858s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2892692s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3462548s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f3_0_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.379606s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f3_0_0...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.440658s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.67896s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f0_3_0...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.821607s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f1_2_3...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_0...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f1_1_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5793214s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5842123s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f0_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f2_2_0...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6247787s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.689233s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.6163087s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f0_2_2...
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f2_2_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.0591278s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f0_1_1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.396066s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f2_0_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.8350186s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.143322s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f1_2_1...
+Thread 6: Checking harness transcript::transcript_framing_shape_l2_f1_0_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.473501s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.171457s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f0_0_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.01084s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_1_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4823174s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l3_f...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f1_0_3...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.436099s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.6849313s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (15 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 1.3644004s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.546255s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f1...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3624845s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0_3_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f1_3_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f0_3_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f2_3_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4395933s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.4698005s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f2_0_0...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.113708s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f1_0_2...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f3_1_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f1_2_0...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7665596s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7915435s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f1_0...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f0_0_3...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4743223s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.874166s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.744451s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f3_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f1_1_2...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.110688s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.48085s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f1_2_3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.916985s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f0_2_3...
+Thread 0: Checking harness transcript::transcript_framing_shape_l2_f0_2_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.150322s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f0_2_1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6282287s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f1_3_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.0642405s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f2_1_2...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.005131s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.722466s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3838687s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.157333s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l0_f1_3_3...
+Thread 1: Checking harness transcript::transcript_framing_shape_l0_f0_3...
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f1_0_1...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8521986s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f2_3_3...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f1_0_1...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f0_2_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.554386s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.037769s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.113621s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.86535s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l1_f1_0_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f2_0...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2690945s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.091498s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l1_f3_3_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f1_0_2...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.78146s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.407345s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l1_f0_3_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l0_f0_2_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f1_3...
+Thread 6: Checking harness transcript::transcript_framing_shape_l1_f2_1_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3161845s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.475752s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8049312s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.72752s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f3_3_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.196499s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.125749s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.933954s
+
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f2_1...
+Thread 3: Checking harness transcript::transcript_framing_shape_l1_f1_1...
+Thread 7: Checking harness transcript::transcript_framing_shape_l3_f3_0...
+Thread 4: Checking harness transcript::transcript_framing_shape_l2_f0_2...
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f0_1_3...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.70648s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_0_1...
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f0_1_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7171316s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4013987s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5974185s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.43879s
+
+Thread 2: Checking harness transcript::transcript_framing_shape_l1_f2_3_2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l0_f3_3_3...
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f2_0_3...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.440072s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.410263s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f2_0_1...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8102126s
+
+Thread 6: Checking harness transcript::transcript_framing_shape_l3_f2_3_0...
+Thread 1: Checking harness transcript::transcript_framing_shape_l1_f3_3_3...
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.051818s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l2_f1_0_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.0333443s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8543735s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.8926296s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 5.063016s
+
+Thread 7: Checking harness transcript::transcript_framing_shape_l2_f3_0_0...
+Thread 2: Checking harness transcript::transcript_framing_shape_l2_f3_2_2...
+Thread 3: Checking harness transcript::transcript_framing_shape_l3_f3_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l3_f3_1_3...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.7830524s
+
+Thread 4: Checking harness transcript::transcript_framing_shape_l3_f3_1_0...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.331855s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l2_f2_1_1...
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2238684s
+
+Thread 5: Checking harness transcript::transcript_framing_shape_l3_f3_1_2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1543145s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 8.314153s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.074734s
+
+Thread 3: Checking harness transcript::transcript_framing_shape_l2_f0_0_2...
+Thread 2: Checking harness transcript::transcript_framing_shape_l0_f3_1_1...
+Thread 6: Checking harness transcript::transcript_framing_shape_l0_f3_2_1...
+Thread 0: Checking harness transcript::transcript_framing_shape_l0_f1_1_1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.107305s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.531375s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.368831s
+
+Thread 1: Checking harness transcript::transcript_framing_shape_l3_f0_2_2...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 597 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 7.820977s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0500755s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3904266s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.536542s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.248434s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 594 failed (7 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7263532s
+
+Manual Harness Summary:
+Complete - 340 successfully verified harnesses, 0 failures, 340 total.
+
+===== harness secret_ct_eq_correct: SUCCESSFUL (11s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (2)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.66s
+Thread 6: Checking harness secret::secret_ct_eq_correct...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 279 failed (3 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 9.135487s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness rng_adapter_latches_failure: SUCCESSFUL (26s wall, 1 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (1)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.83s
+Thread 6: Checking harness rng::rng_adapter_latches_failure...
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 528 failed (1 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 24.027534s
+
+Manual Harness Summary:
+Complete - 1 successfully verified harnesses, 0 failures, 1 total.
+
+===== harness sig_message_representative: SUCCESSFUL (47s wall, 49 harnesses) =====
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+warning: profile package spec `vyra-hqc` in profile `dev` did not match any packages
+
+help: a package with a similar name exists: `vyra-sig`
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+   Compiling vyra-proofs v0.1.0 (/work/ws/crates/vyra-proofs)
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: use of an unstable feature
+ --> <crate attribute>:1:12
+  |
+1 | #![feature(register_tool)]
+  |            ^^^^^^^^^^^^^
+  |
+  = note: requested on the command line with `--force-warn unstable-features`
+
+warning: Found the following unsupported constructs:
+             - caller_location (1)
+             - foreign function (2)
+         
+         Verification will fail if one or more of these constructs is reachable.
+         See https://model-checking.github.io/kani/rust-feature-support.html for more details.
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.75s
+Thread 7: Checking harness sig::sig_message_representative_c4_m5...
+Thread 1: Checking harness sig::sig_message_representative_c5_m3...
+Thread 6: Checking harness sig::sig_message_representative_c5_m5...
+Thread 5: Checking harness sig::sig_message_representative_c0_m3...
+Thread 3: Checking harness sig::sig_message_representative_c1_m3...
+Thread 4: Checking harness sig::sig_message_representative_c6_m5...
+Thread 0: Checking harness sig::sig_message_representative_c2_m3...
+Thread 2: Checking harness sig::sig_message_representative_c4_m2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.411003s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.51093s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.623328s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7632902s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.856015s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.9862676s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.228528s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4314237s
+
+Thread 5: Checking harness sig::sig_message_representative_c6_m3...
+Thread 3: Checking harness sig::sig_message_representative_c1_m6...
+Thread 7: Checking harness sig::sig_message_representative_c2_m2...
+Thread 1: Checking harness sig::sig_message_representative_c4_m3...
+Thread 0: Checking harness sig::sig_message_representative_c6_m0...
+Thread 6: Checking harness sig::sig_message_representative_c4_m0...
+Thread 4: Checking harness sig::sig_message_representative_c6_m4...
+Thread 2: Checking harness sig::sig_message_representative_c1_m5...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.8178682s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.716868s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.822931s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7933245s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.0454974s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.252597s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.2001867s
+
+Thread 5: Checking harness sig::sig_message_representative_c0_m5...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5359206s
+
+Thread 3: Checking harness sig::sig_message_representative_c2_m1...
+Thread 7: Checking harness sig::sig_message_representative_c2_m0...
+Thread 0: Checking harness sig::sig_message_representative_c5_m4...
+Thread 1: Checking harness sig::sig_message_representative_c5_m0...
+Thread 6: Checking harness sig::sig_message_representative_c0_m6...
+Thread 4: Checking harness sig::sig_message_representative_c2_m5...
+Thread 2: Checking harness sig::sig_message_representative_c3_m2...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2826133s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3727734s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3039384s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3494658s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.129735s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5493562s
+
+Thread 5: Checking harness sig::sig_message_representative_c5_m6...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.393805s
+
+Thread 3: Checking harness sig::sig_message_representative_c6_m2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4928393s
+
+Thread 7: Checking harness sig::sig_message_representative_c4_m1...
+Thread 1: Checking harness sig::sig_message_representative_c2_m4...
+Thread 6: Checking harness sig::sig_message_representative_c0_m4...
+Thread 0: Checking harness sig::sig_message_representative_c3_m1...
+Thread 4: Checking harness sig::sig_message_representative_c6_m1...
+Thread 2: Checking harness sig::sig_message_representative_c1_m4...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3086147s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.361686s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.617558s
+
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.300068s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.1815205s
+
+Thread 5: Checking harness sig::sig_message_representative_c1_m1...
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.4300113s
+
+Thread 3: Checking harness sig::sig_message_representative_c0_m0...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.3902326s
+
+Thread 7: Checking harness sig::sig_message_representative_c3_m5...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 4.5618443s
+
+Thread 1: Checking harness sig::sig_message_representative_c3_m3...
+Thread 6: Checking harness sig::sig_message_representative_c1_m0...
+Thread 0: Checking harness sig::sig_message_representative_c3_m0...
+Thread 4: Checking harness sig::sig_message_representative_c6_m6...
+Thread 2: Checking harness sig::sig_message_representative_c4_m6...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3876224s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 493 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5880892s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5056145s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.1576746s
+
+Thread 5: Checking harness sig::sig_message_representative_c3_m4...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3480477s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.155928s
+
+Thread 3: Checking harness sig::sig_message_representative_c0_m1...
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4847097s
+
+Thread 7: Checking harness sig::sig_message_representative_c5_m2...
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.4239938s
+
+Thread 6: Checking harness sig::sig_message_representative_c0_m2...
+Thread 1: Checking harness sig::sig_message_representative_c2_m6...
+Thread 0: Checking harness sig::sig_message_representative_c4_m4...
+Thread 4: Checking harness sig::sig_message_representative_c1_m2...
+Thread 2: Checking harness sig::sig_message_representative_c3_m6...
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.6175275s
+
+Thread 3: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.1958075s
+
+Thread 7: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.2911026s
+
+Thread 6: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3699174s
+
+Thread 5: Checking harness sig::sig_message_representative_c5_m1...
+Thread 1: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5927634s
+
+Thread 0: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.7252815s
+
+Thread 4: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.5189948s
+
+Thread 2: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 3.3583202s
+
+Thread 5: 
+VERIFICATION RESULT:
+ ** 0 of 492 failed (9 unreachable)
+
+VERIFICATION:- SUCCESSFUL
+Verification Time: 2.5307305s
+
+Manual Harness Summary:
+Complete - 49 successfully verified harnesses, 0 failures, 49 total.
+
+===== mutant M1 (vyra-core/src/wire.rs) vs wire_decode_exact: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: header_ok
+ File: "crates/vyra-proofs/src/wire.rs", line 74, in wire::wire_decode_exact
+VERIFICATION:- FAILED
+Verification Time: 3.979408s
+
+===== mutant M2 (vyra-core/src/wire.rs) vs wire_reader_ops: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: fin ==
+ File: "crates/vyra-proofs/src/wire.rs", line 149, in wire::wire_reader_ops
+VERIFICATION:- FAILED
+Verification Time: 9.330532s
+
+===== mutant M3 (vyra-core/src/wire.rs) vs wire_reader_ops: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: n <= left
+ File: "crates/vyra-proofs/src/wire.rs", line 118, in wire::wire_reader_ops
+Failed Checks: assertion failed: is_subslice_at(head, input, consumed, n)
+ File: "crates/vyra-proofs/src/wire.rs", line 119, in wire::wire_reader_ops
+VERIFICATION:- FAILED
+Verification Time: 15.360165s
+
+===== mutant M4 (vyra-core/src/wire.rs) vs wire_round_trip: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: enc[4] == VERSION
+ File: "crates/vyra-proofs/src/wire.rs", line 176, in wire::check_round_trip
+VERIFICATION:- FAILED
+Verification Time: 1.4714816s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: enc[4] == VERSION
+ File: "crates/vyra-proofs/src/wire.rs", line 176, in wire::check_round_trip
+VERIFICATION:- FAILED
+Verification Time: 1.4841975s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: enc[4] == VERSION
+ File: "crates/vyra-proofs/src/wire.rs", line 176, in wire::check_round_trip
+VERIFICATION:- FAILED
+Verification Time: 1.5760213s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: enc[4] == VERSION
+ File: "crates/vyra-proofs/src/wire.rs", line 176, in wire::check_round_trip
+VERIFICATION:- FAILED
+Verification Time: 1.6000171s
+
+===== mutant M5 (vyra-core/src/wire.rs) vs wire_header_rejection: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: res.is_ok() == canonical
+ File: "crates/vyra-proofs/src/wire.rs", line 249, in wire::wire_header_rejection
+VERIFICATION:- FAILED
+Verification Time: 0.6490552s
+
+===== mutant M6 (vyra-core/src/transcript.rs) vs transcript_single_frame: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: take_frame rejected frame(x) || rest
+ File: "crates/vyra-proofs/src/transcript.rs", line 79, in transcript::transcript_single_frame
+Failed Checks: assertion failed: is_sub(gx, &enc, 8, xl)
+ File: "crates/vyra-proofs/src/transcript.rs", line 82, in transcript::transcript_single_frame
+Failed Checks: assertion failed: is_sub(grest, &enc, 8 + xl, rl)
+ File: "crates/vyra-proofs/src/transcript.rs", line 83, in transcript::transcript_single_frame
+VERIFICATION:- FAILED
+Verification Time: 13.0026655s
+
+===== mutant M7 (vyra-core/src/transcript.rs) vs transcript_framing_shape: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: parse_framed rejected framed_encoding output
+ File: "crates/vyra-proofs/src/transcript.rs", line 94, in transcript::check_framing_round_trip
+VERIFICATION:- FAILED
+Verification Time: 2.3992019s
+VERIFICATION RESULT:
+Failed Checks: parse_framed rejected framed_encoding output
+ File: "crates/vyra-proofs/src/transcript.rs", line 94, in transcript::check_framing_round_trip
+VERIFICATION:- FAILED
+Verification Time: 15.273956s
+VERIFICATION RESULT:
+Failed Checks: parse_framed rejected framed_encoding output
+ File: "crates/vyra-proofs/src/transcript.rs", line 94, in transcript::check_framing_round_trip
+VERIFICATION:- FAILED
+Verification Time: 15.513546s
+VERIFICATION RESULT:
+Failed Checks: parse_framed rejected framed_encoding output
+ File: "crates/vyra-proofs/src/transcript.rs", line 94, in transcript::check_framing_round_trip
+VERIFICATION:- FAILED
+Verification Time: 16.033463s
+
+===== mutant M8 (vyra-core/src/transcript.rs) vs transcript_prefix_inverse: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: prefix_len(frame_prefix_of_len(n)) == Some(n)
+ File: "crates/vyra-proofs/src/transcript.rs", line 50, in transcript::transcript_prefix_inverse
+VERIFICATION:- FAILED
+Verification Time: 0.1775188s
+
+===== mutant M9 (vyra-core/src/secret.rs) vs secret_ct_eq_correct: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: sa.ct_eq(&sb) == (a == b)
+ File: "crates/vyra-proofs/src/secret.rs", line 32, in secret::secret_ct_eq_correct
+VERIFICATION:- FAILED
+Verification Time: 0.6123979s
+
+===== mutant M10 (vyra-core/src/rng.rs) vs rng_adapter_latches_failure: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: "non-zero output after failure"
+ File: "crates/vyra-proofs/src/rng.rs", line 63, in rng::check_output
+VERIFICATION:- FAILED
+Verification Time: 25.60001s
+
+===== mutant M11 (vyra-core/src/rng.rs) vs rng_adapter_latches_failure: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: "source called after a failure"
+ File: "crates/vyra-proofs/src/rng.rs", line 39, in <rng::NondetSource<'_> as vyra_core::EntropySource>::fill
+VERIFICATION:- FAILED
+Verification Time: 24.593029s
+
+===== mutant M12 (vyra-sig/src/message.rs) vs sig_message_representative: FAILED -> killed (expected killed) OK =====
+VERIFICATION RESULT:
+Failed Checks: assertion failed: repr.len() == SIG_FIXED_LEN + 1 + ctx.len() + msg.len()
+ File: "crates/vyra-proofs/src/sig.rs", line 31, in sig::check_representative
+VERIFICATION:- FAILED
+Verification Time: 1.1964003s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: repr.len() == SIG_FIXED_LEN + 1 + ctx.len() + msg.len()
+ File: "crates/vyra-proofs/src/sig.rs", line 31, in sig::check_representative
+VERIFICATION:- FAILED
+Verification Time: 1.1477379s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: repr.len() == SIG_FIXED_LEN + 1 + ctx.len() + msg.len()
+ File: "crates/vyra-proofs/src/sig.rs", line 31, in sig::check_representative
+VERIFICATION:- FAILED
+Verification Time: 1.1736331s
+VERIFICATION RESULT:
+Failed Checks: assertion failed: repr.len() == SIG_FIXED_LEN + 1 + ctx.len() + msg.len()
+ File: "crates/vyra-proofs/src/sig.rs", line 31, in sig::check_representative
+VERIFICATION:- FAILED
+Verification Time: 1.1801751s
+
+total wall time: 800s (excluding image build)
+===== SUMMARY =====
+harness	wire_decode_exact	SUCCESSFUL	5s	n=1
+harness	wire_reader_ops	SUCCESSFUL	30s	n=1
+harness	wire_round_trip	SUCCESSFUL	14s	n=17
+harness	wire_header_rejection	SUCCESSFUL	2s	n=1
+harness	transcript_prefix_inverse	SUCCESSFUL	2s	n=1
+harness	transcript_single_frame	SUCCESSFUL	45s	n=1
+harness	transcript_framing_shape	SUCCESSFUL	374s	n=340
+harness	secret_ct_eq_correct	SUCCESSFUL	11s	n=1
+harness	rng_adapter_latches_failure	SUCCESSFUL	26s	n=1
+harness	sig_message_representative	SUCCESSFUL	47s	n=49
+mutant	M1	wire_decode_exact	FAILED	outcome=killed	expected=killed	OK	14s
+mutant	M2	wire_reader_ops	FAILED	outcome=killed	expected=killed	OK	11s
+mutant	M3	wire_reader_ops	FAILED	outcome=killed	expected=killed	OK	17s
+mutant	M4	wire_round_trip	FAILED	outcome=killed	expected=killed	OK	8s
+mutant	M5	wire_header_rejection	FAILED	outcome=killed	expected=killed	OK	2s
+mutant	M6	transcript_single_frame	FAILED	outcome=killed	expected=killed	OK	15s
+mutant	M7	transcript_framing_shape	FAILED	outcome=killed	expected=killed	OK	89s
+mutant	M8	transcript_prefix_inverse	FAILED	outcome=killed	expected=killed	OK	2s
+mutant	M9	secret_ct_eq_correct	FAILED	outcome=killed	expected=killed	OK	2s
+mutant	M10	rng_adapter_latches_failure	FAILED	outcome=killed	expected=killed	OK	28s
+mutant	M11	rng_adapter_latches_failure	FAILED	outcome=killed	expected=killed	OK	26s
+mutant	M12	sig_message_representative	FAILED	outcome=killed	expected=killed	OK	26s
+overall exit status: 0
+image sha256:2dbdef80e322f20b4c274882069e090e7f2326328ef6dbcb54d3e782650f1ec0

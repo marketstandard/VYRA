@@ -1,0 +1,26 @@
+[package]
+name = "vyra-seal"
+description = "Hybrid post-quantum sealed box (KEM-DEM: VYRA hybrid KEM + ChaCha20-Poly1305) for VYRA"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+vyra-core.workspace = true
+# vyra-kem is not listed in [workspace.dependencies]; path dependency.
+vyra-kem = { path = "../vyra-kem", version = "0.1.0" }
+chacha20poly1305 = { version = "0.11.0", default-features = false, features = ["alloc", "zeroize"] }
+zeroize.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+shake.workspace = true
+
+[lints]
+workspace = true

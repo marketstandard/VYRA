@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 575.6" width="880" height="575.6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>How VYRA combines two independent components</title>
+<rect x="0.5" y="0.5" width="879" height="574.6" rx="10" fill="#1a1a19" stroke="#383835"/>
+<text x="20" y="30" font-size="15" fill="#f0efec" font-weight="600">How VYRA combines two independent components</text>
+<text x="20" y="49" font-size="12" fill="#c3c2b7">Both constructions are built so that the result still holds if one component family fails.</text>
+<text x="20" y="80" font-size="13" fill="#f0efec" font-weight="700">a</text>
+<text x="36" y="80" font-size="13" fill="#f0efec" font-weight="600">Hybrid key encapsulation (VYRA-KEM)</text>
+<rect x="20" y="116" width="150" height="108" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="95" y="136" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">Recipient public key</text>
+<text x="95" y="153.4" font-size="11" fill="#c3c2b7" text-anchor="middle">pk1 for ML-KEM</text>
+<text x="95" y="168.6" font-size="11" fill="#c3c2b7" text-anchor="middle">pk2 for HQC</text>
+<rect x="232" y="96" width="196" height="62" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="330" y="116" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">ML-KEM encapsulate</text>
+<text x="330" y="133.4" font-size="11" fill="#c3c2b7" text-anchor="middle">module lattices · FIPS 203</text>
+<rect x="232" y="182" width="196" height="62" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="330" y="202" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">HQC encapsulate</text>
+<text x="330" y="219.4" font-size="11" fill="#c3c2b7" text-anchor="middle">error-correcting codes · v5.1</text>
+<path d="M170,151 L201,151 L201,127 L232,127" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M232,127 L224,130.6 L224,123.4 Z" fill="#c3c2b7"/>
+<path d="M170,189 L201,189 L201,213 L232,213" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M232,213 L224,216.6 L224,209.4 Z" fill="#c3c2b7"/>
+<rect x="520" y="96" width="232" height="148" fill="#262624" rx="6" stroke="#3987e5" stroke-width="1.5"/>
+<text x="636" y="117" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">Combiner: one SHA3-256 hash</text>
+<text x="636" y="134" font-size="10.5" fill="#c3c2b7" text-anchor="middle">over everything, each field length-prefixed</text>
+<rect x="534" y="146" width="41" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="554.5" y="160" font-size="11" fill="#f0efec" text-anchor="middle">label</text>
+<rect x="580" y="146" width="57.1" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="608.5" y="160" font-size="11" fill="#f0efec" text-anchor="middle">suite id</text>
+<rect x="642.1" y="146" width="24.8" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="654.5" y="160" font-size="11" fill="#f0efec" text-anchor="middle">k1</text>
+<rect x="671.9" y="146" width="24.8" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="684.2" y="160" font-size="11" fill="#f0efec" text-anchor="middle">k2</text>
+<rect x="701.6" y="146" width="24.8" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="714" y="160" font-size="11" fill="#f0efec" text-anchor="middle">c1</text>
+<rect x="534" y="171" width="24.8" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="546.4" y="185" font-size="11" fill="#f0efec" text-anchor="middle">c2</text>
+<rect x="563.8" y="171" width="30.2" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="578.9" y="185" font-size="11" fill="#f0efec" text-anchor="middle">pk1</text>
+<rect x="598.9" y="171" width="30.2" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="614" y="185" font-size="11" fill="#f0efec" text-anchor="middle">pk2</text>
+<path d="M428,127 L520,127" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M520,127 L512,130.6 L512,123.4 Z" fill="#c3c2b7"/>
+<path d="M428,213 L520,213" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M520,213 L512,216.6 L512,209.4 Z" fill="#c3c2b7"/>
+<text x="474" y="120" font-size="10.5" fill="#c3c2b7" text-anchor="middle">key k1, ct c1</text>
+<text x="474" y="206" font-size="10.5" fill="#c3c2b7" text-anchor="middle">key k2, ct c2</text>
+<path d="M95,224 L95,268 L636,268 L636,244" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M636,244 L639.6,252 L632.4,252 Z" fill="#c3c2b7"/>
+<text x="300" y="262" font-size="10.5" fill="#c3c2b7" text-anchor="middle">the public keys are hashed as well</text>
+<path d="M752,170 L790,170" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M790,170 L782,173.6 L782,166.4 Z" fill="#c3c2b7"/>
+<rect x="790" y="142" width="70" height="56" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="825" y="163" font-size="13" fill="#f0efec" text-anchor="middle" font-weight="600">K</text>
+<text x="825" y="181.8" font-size="12" fill="#c3c2b7" text-anchor="middle">32 bytes</text>
+<text x="20" y="292" font-size="11.5" fill="#c3c2b7">The ciphertext sent is c1 ‖ c2. Because K depends on both ciphertexts and both public keys, changing any of them changes K. The draft design this</text>
+<text x="20" y="307.5" font-size="11.5" fill="#c3c2b7">project started from used K = KDF(k1 ‖ k2), which ties K to neither; the experiment below reproduces the attack on that draft (the Naive baseline).</text>
+<line x1="20" y1="333" x2="860" y2="333" stroke="#2c2c2a" stroke-width="1"/>
+<text x="20" y="359" font-size="13" fill="#f0efec" font-weight="700">b</text>
+<text x="36" y="359" font-size="13" fill="#f0efec" font-weight="600">Composite signature (VYRA-SIG)</text>
+<rect x="20" y="403" width="130" height="62" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="85" y="423" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">Message M</text>
+<text x="85" y="440.4" font-size="11" fill="#c3c2b7" text-anchor="middle">context string ctx</text>
+<rect x="196" y="375" width="268" height="118" fill="#262624" rx="6" stroke="#3987e5" stroke-width="1.5"/>
+<text x="330" y="396" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">Message representative M′</text>
+<text x="330" y="413" font-size="10.5" fill="#c3c2b7" text-anchor="middle">what both halves actually sign</text>
+<rect x="210" y="425" width="41" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="230.5" y="439" font-size="11" fill="#f0efec" text-anchor="middle">label</text>
+<rect x="255.9" y="425" width="57.1" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="284.5" y="439" font-size="11" fill="#f0efec" text-anchor="middle">suite id</text>
+<rect x="210" y="450" width="143.4" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="281.7" y="464" font-size="11" fill="#f0efec" text-anchor="middle">hash of both public keys</text>
+<rect x="358.4" y="450" width="67.9" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="392.3" y="464" font-size="11" fill="#f0efec" text-anchor="middle">ctx length</text>
+<rect x="210" y="475" width="30.2" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="225.1" y="489" font-size="11" fill="#f0efec" text-anchor="middle">ctx</text>
+<rect x="245.2" y="475" width="19.4" height="20" fill="#1a1a19" rx="10" stroke="#52514e" stroke-width="1"/>
+<text x="254.9" y="489" font-size="11" fill="#f0efec" text-anchor="middle">M</text>
+<path d="M150,434 L196,434" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M196,434 L188,437.6 L188,430.4 Z" fill="#c3c2b7"/>
+<rect x="510" y="369" width="212" height="58" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="616" y="389" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">ML-DSA sign</text>
+<text x="616" y="406.4" font-size="11" fill="#c3c2b7" text-anchor="middle">module lattices · FIPS 204</text>
+<rect x="510" y="445" width="212" height="58" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="616" y="465" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">Second half sign</text>
+<text x="616" y="482.4" font-size="11" fill="#c3c2b7" text-anchor="middle">Ed25519ph, or SLH-DSA (hash-based)</text>
+<path d="M464,420 L487,420 L487,398 L510,398" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M510,398 L502,401.6 L502,394.4 Z" fill="#c3c2b7"/>
+<path d="M464,448 L487,448 L487,474 L510,474" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M510,474 L502,477.6 L502,470.4 Z" fill="#c3c2b7"/>
+<rect x="768" y="403" width="92" height="62" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="814" y="423" font-size="12" fill="#f0efec" text-anchor="middle" font-weight="600">s1 ‖ s2</text>
+<text x="814" y="440.4" font-size="11" fill="#c3c2b7" text-anchor="middle">valid only if</text>
+<text x="814" y="455.6" font-size="11" fill="#c3c2b7" text-anchor="middle">both verify</text>
+<path d="M722,398 L745,398 L745,423 L768,423" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M768,423 L760,426.6 L760,419.4 Z" fill="#c3c2b7"/>
+<path d="M722,474 L745,474 L745,447 L768,447" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M768,447 L760,450.6 L760,443.4 Z" fill="#c3c2b7"/>
+<text x="20" y="523" font-size="11.5" fill="#c3c2b7">Each half is also signed under a VYRA-specific context (label and suite id), so a half is not a valid standalone signature and a standalone signature</text>
+<text x="20" y="538.6" font-size="11.5" fill="#c3c2b7">is not a valid half. The transition suites pair ML-DSA with Ed25519; the dual post-quantum suites pair it with SLH-DSA, so two different post-quantum</text>
+<text x="20" y="554.1" font-size="11.5" fill="#c3c2b7">assumptions must both fail.</text>
+</svg>

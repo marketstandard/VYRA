@@ -1,0 +1,33 @@
+[package]
+name = "vyra-kem"
+description = "Hybrid ML-KEM + HQC key encapsulation for VYRA"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+vyra-core.workspace = true
+ml-kem = { workspace = true, features = ["zeroize"] }
+vyra-hqc = { path = "../vyra-hqc", version = "0.1.0" }
+subtle.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+sha3.workspace = true
+shake.workspace = true
+# Independent second implementation of ML-KEM, used only for differential
+# conformance tests (F4); not used by library code. No independent second
+# implementation of HQC v5.1 exists (see tests/conformance_hqc.rs).
+fips203 = { version = "=0.5.0", default-features = false, features = ["ml-kem-512", "ml-kem-768", "ml-kem-1024"] }
+# NIST AES-256 CTR DRBG of the HQC v5.1 KAT generator (tests only).
+aes = "0.9"
+
+[lints]
+workspace = true

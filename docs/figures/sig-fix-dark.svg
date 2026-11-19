@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430.3" width="880" height="430.3" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>A weakness the experiment found in VYRA's own signature design, and the fix</title>
+<rect x="0.5" y="0.5" width="879" height="429.3" rx="10" fill="#1a1a19" stroke="#383835"/>
+<text x="20" y="30" font-size="15" fill="#f0efec" font-weight="600">A weakness the experiment found in VYRA's own signature design, and the fix</text>
+<text x="20" y="49" font-size="12" fill="#c3c2b7">Setting: the lattice half (ML-DSA) is modelled as forgeable, and the Ed25519 key also signs ordinary messages elsewhere.</text>
+<text x="30" y="92" font-size="11" fill="#898781" font-weight="700">Before</text>
+<text x="30" y="111" font-size="12" fill="#f0efec" font-weight="600">Ed25519 half was a plain Ed25519 signature over M′</text>
+<rect x="30" y="126" width="187" height="50" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="123.5" y="145.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">Ed25519 half</text>
+<text x="123.5" y="162.2" font-size="10.5" fill="#c3c2b7" text-anchor="middle">from an ordinary signer</text>
+<rect x="229" y="126" width="187" height="50" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="322.5" y="145.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">ML-DSA half</text>
+<text x="322.5" y="162.2" font-size="10.5" fill="#c3c2b7" text-anchor="middle">forged (failure model)</text>
+<path d="M123.5,176 L123.5,192 L193,192 L193,206" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M193,206 L189.4,198 L196.6,198 Z" fill="#c3c2b7"/>
+<path d="M322.5,176 L322.5,192 L253,192 L253,206" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M253,206 L249.4,198 L256.6,198 Z" fill="#c3c2b7"/>
+<rect x="133" y="206" width="180" height="30" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="223" y="225.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">Composite verifier</text>
+<rect x="30" y="254" width="30" height="30" fill="#d03b3b" rx="2"/>
+<line x1="39" y1="263" x2="51" y2="275" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="39" y1="275" x2="51" y2="263" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+<text x="72" y="278" font-size="26" fill="#f0efec" font-weight="600">200 / 200</text>
+<text x="200.7" y="266" font-size="11.5" fill="#c3c2b7">forgeries accepted</text>
+<text x="200.7" y="281" font-size="11" fill="#898781">800 / 800 over all four oracle modes</text>
+<text x="30" y="308" font-size="11" fill="#c3c2b7">An ordinary Ed25519 signature over M′ is exactly what the composite</text>
+<text x="30" y="322.9" font-size="11" fill="#c3c2b7">expected, so the attacker gets a valid half from the ordinary signer</text>
+<text x="30" y="337.7" font-size="11" fill="#c3c2b7">and forges the other.</text>
+<text x="464" y="92" font-size="11" fill="#898781" font-weight="700">After</text>
+<text x="464" y="111" font-size="12" fill="#f0efec" font-weight="600">Ed25519 half is Ed25519ph bound to the composite's context</text>
+<rect x="464" y="126" width="187" height="50" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="557.5" y="145.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">Ed25519 half</text>
+<text x="557.5" y="162.2" font-size="10.5" fill="#c3c2b7" text-anchor="middle">from an ordinary signer</text>
+<rect x="663" y="126" width="187" height="50" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="756.5" y="145.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">ML-DSA half</text>
+<text x="756.5" y="162.2" font-size="10.5" fill="#c3c2b7" text-anchor="middle">forged (failure model)</text>
+<path d="M557.5,176 L557.5,192 L627,192 L627,206" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M627,206 L623.4,198 L630.6,198 Z" fill="#c3c2b7"/>
+<path d="M756.5,176 L756.5,192 L687,192 L687,206" fill="none" stroke="#c3c2b7" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M687,206 L683.4,198 L690.6,198 Z" fill="#c3c2b7"/>
+<rect x="567" y="206" width="180" height="30" fill="#262624" rx="6" stroke="#383835" stroke-width="1"/>
+<text x="657" y="225.5" font-size="11.5" fill="#f0efec" text-anchor="middle" font-weight="600">Composite verifier</text>
+<rect x="464" y="254" width="30" height="30" fill="#104281" rx="2"/>
+<text x="506" y="278" font-size="26" fill="#f0efec" font-weight="600">0 / 200</text>
+<text x="609.2" y="266" font-size="11.5" fill="#c3c2b7">forgeries accepted</text>
+<text x="609.2" y="281" font-size="11" fill="#898781">0 / 800 over all four oracle modes</text>
+<text x="464" y="308" font-size="11" fill="#c3c2b7">The half must be signed under the context “VYRA-SIG-v1 ‖ suite”. An</text>
+<text x="464" y="322.9" font-size="11" fill="#c3c2b7">ordinary signature is not such a half, so the same attack assembles</text>
+<text x="464" y="337.7" font-size="11" fill="#c3c2b7">nothing that verifies.</text>
+<rect x="16" y="68" width="414" height="284.6" fill="none" rx="6" stroke="#383835" stroke-width="1"/>
+<rect x="450" y="68" width="414" height="284.6" fill="none" rx="6" stroke="#383835" stroke-width="1"/>
+<rect x="16" y="363.6" width="14" height="14" fill="#d03b3b" rx="2"/>
+<line x1="20.2" y1="367.8" x2="25.8" y2="373.4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="20.2" y1="373.4" x2="25.8" y2="367.8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+<text x="36" y="374.6" font-size="11.5" fill="#c3c2b7">BROKEN: an implemented attack won</text>
+<rect x="244" y="363.6" width="14" height="14" fill="#104281" rx="2"/>
+<text x="264" y="374.6" font-size="11.5" fill="#c3c2b7">no attack found (not a proof of security)</text>
+<text x="16" y="394.6" font-size="11" fill="#898781">Game STRIP-STANDALONE: the attacker has no composite signing oracle, only ordinary signing oracles on the component keys, and wins with any valid composite</text>
+<text x="16" y="409.4" font-size="11" fill="#898781">signature. The earlier design stays in the experiment as a control that must keep breaking.</text>
+</svg>

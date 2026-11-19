@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc b3b3a6a1d77b55923b6ab3ac5c5691c8a8de02213c11873f055c221815d450a0 # shrinks to suite = Vyra1, seed = 0

@@ -1,0 +1,13 @@
+#id	file (under crates/)	original text (literal, must occur exactly once)	mutant text	kani harness	exhaustive test	expected (kani)	expected (exhaustive)
+M1	vyra-core/src/wire.rs	if *version != VERSION {	if false {	wire_decode_exact	decode_matches_spec_exhaustive	killed	killed
+M2	vyra-core/src/wire.rs	if self.remaining.is_empty() {	if true {	wire_reader_ops	reader_matches_model_exhaustive	killed	killed
+M3	vyra-core/src/wire.rs	match self.remaining.split_at_checked(n) {	match self.remaining.split_at_checked(n.saturating_sub(1)) {	wire_reader_ops	reader_matches_model_exhaustive	killed	killed
+M4	vyra-core/src/wire.rs	out.push(VERSION);	out.push(VERSION.wrapping_add(1));	wire_round_trip	round_trip_exhaustive	killed	killed
+M5	vyra-core/src/wire.rs	if *object_type != expected_type.as_u8() {	if false {	wire_header_rejection	decode_matches_spec_exhaustive	killed	killed
+M6	vyra-core/src/transcript.rs	out.extend_from_slice(&frame_prefix(bytes));	/* prefix dropped */	transcript_single_frame	framing_injective_exhaustive	killed	killed
+M7	vyra-core/src/transcript.rs	(len as u64).to_be_bytes()	((len as u64) & 1).to_be_bytes()	transcript_framing_shape	framing_injective_exhaustive	killed	killed
+M8	vyra-core/src/transcript.rs	(len as u64).to_be_bytes()	((len as u64) & 0xFF).to_be_bytes()	transcript_prefix_inverse	framing_injective_exhaustive	killed	survives
+M9	vyra-core/src/secret.rs	bool::from(self.bytes.as_slice().ct_eq(other.bytes.as_slice()))	self.bytes.len() == other.bytes.len()	secret_ct_eq_correct	ct_eq_exhaustive	killed	killed
+M10	vyra-core/src/rng.rs	            dst.fill(0);	            let _ = &dst;	rng_adapter_latches_failure	rng_adapter_exhaustive	killed	killed
+M11	vyra-core/src/rng.rs	if !self.failed && self.source.fill(dst).is_err() {	if self.source.fill(dst).is_err() {	rng_adapter_latches_failure	rng_adapter_exhaustive	killed	killed
+M12	vyra-sig/src/message.rs	    out.push(ctx_len);	    let _ = ctx_len;	sig_message_representative	-	killed	-

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 255.4" width="880" height="255.4" font-family="'Libertinus Serif', serif" role="img">
+<title>Failure injection: turning “survives one broken component” into a test</title>
+<rect x="16" y="8" width="158" height="92" fill="#f2f2f2" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="95" y="28" font-size="12" fill="#000000" text-anchor="middle" font-weight="600">1  Real components</text>
+<text x="95" y="45.4" font-size="11" fill="#333333" text-anchor="middle">ML-KEM-512, HQC-128,</text>
+<text x="95" y="60.6" font-size="11" fill="#333333" text-anchor="middle">ML-DSA-44, Ed25519,</text>
+<text x="95" y="75.8" font-size="11" fill="#333333" text-anchor="middle">SLH-DSA-SHAKE-128s</text>
+<rect x="188.5" y="8" width="158" height="92" fill="#f2f2f2" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="267.5" y="28" font-size="12" fill="#000000" text-anchor="middle" font-weight="600">2  Break one property</text>
+<text x="267.5" y="45.4" font-size="11" fill="#333333" text-anchor="middle">5 failure models for KEMs,</text>
+<text x="267.5" y="60.6" font-size="11" fill="#333333" text-anchor="middle">5 for signatures; each</text>
+<text x="267.5" y="75.8" font-size="11" fill="#333333" text-anchor="middle">wraps the real component</text>
+<path d="M175,54 L187.5,54" fill="none" stroke="#333333" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M187.5,54 L179.5,57.6 L179.5,50.4 Z" fill="#333333"/>
+<rect x="361" y="8" width="158" height="92" fill="#f2f2f2" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="440" y="28" font-size="12" fill="#000000" text-anchor="middle" font-weight="600">3  Compose</text>
+<text x="440" y="45.4" font-size="11" fill="#333333" text-anchor="middle">5 KEM combiners and</text>
+<text x="440" y="60.6" font-size="11" fill="#333333" text-anchor="middle">5 signature designs:</text>
+<text x="440" y="75.8" font-size="11" fill="#333333" text-anchor="middle">VYRA plus baselines</text>
+<path d="M347.5,54 L360,54" fill="none" stroke="#333333" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M360,54 L352,57.6 L352,50.4 Z" fill="#333333"/>
+<rect x="533.5" y="8" width="158" height="92" fill="#f2f2f2" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="612.5" y="28" font-size="12" fill="#000000" text-anchor="middle" font-weight="600">4  Attack</text>
+<text x="612.5" y="45.4" font-size="11" fill="#333333" text-anchor="middle">7 KEM and 9 signature</text>
+<text x="612.5" y="60.6" font-size="11" fill="#333333" text-anchor="middle">games; 11 + 15 coded attackers;</text>
+<text x="612.5" y="75.8" font-size="11" fill="#333333" text-anchor="middle">200 seeded trials per cell</text>
+<path d="M520,54 L532.5,54" fill="none" stroke="#333333" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M532.5,54 L524.5,57.6 L524.5,50.4 Z" fill="#333333"/>
+<rect x="706" y="8" width="158" height="92" fill="#f2f2f2" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="785" y="28" font-size="12" fill="#000000" text-anchor="middle" font-weight="600">5  Decide by a fixed rule</text>
+<text x="785" y="45.4" font-size="11" fill="#333333" text-anchor="middle">exact binomial test,</text>
+<text x="785" y="60.6" font-size="11" fill="#333333" text-anchor="middle">p below 0.000001: BROKEN,</text>
+<text x="785" y="75.8" font-size="11" fill="#333333" text-anchor="middle">else NO ATTACK FOUND</text>
+<path d="M692.5,54 L705,54" fill="none" stroke="#333333" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M705,54 L697,57.6 L697,50.4 Z" fill="#333333"/>
+<text x="16" y="128" font-size="12" fill="#000000" font-weight="600">What keeps the test honest</text>
+<text x="28" y="180" font-size="11" fill="#333333">Named insecure baselines (plain</text>
+<text x="28" y="194.8" font-size="11" fill="#333333">concatenation, XOR) and patterns with both</text>
+<text x="28" y="209.7" font-size="11" fill="#333333">components broken. If these did not break,</text>
+<text x="28" y="224.5" font-size="11" fill="#333333">the harness would be blind.</text>
+<text x="315.3" y="180" font-size="11" fill="#333333">A coin-flipping distinguisher and a garbage</text>
+<text x="315.3" y="194.8" font-size="11" fill="#333333">forger, and every attacker against two real</text>
+<text x="315.3" y="209.7" font-size="11" fill="#333333">components (except XOR, which theory says is</text>
+<text x="315.3" y="224.5" font-size="11" fill="#333333">broken).</text>
+<text x="602.7" y="180" font-size="11" fill="#333333">759 of 3,365 cells carry a verdict predicted</text>
+<text x="602.7" y="194.8" font-size="11" fill="#333333">from a documented claim, control or theorem.</text>
+<text x="602.7" y="209.7" font-size="11" fill="#333333">0 contradicted it. The rest are observations.</text>
+<rect x="16" y="140" width="273.3" height="99.4" fill="none" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="28" y="161" font-size="12" fill="#000000" font-weight="600">Designs that must break</text>
+<rect x="303.3" y="140" width="273.3" height="99.4" fill="none" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="315.3" y="161" font-size="12" fill="#000000" font-weight="600">Attackers that must lose</text>
+<rect x="590.7" y="140" width="273.3" height="99.4" fill="none" rx="6" stroke="#999999" stroke-width="1"/>
+<text x="602.7" y="161" font-size="12" fill="#000000" font-weight="600">Expectations written first</text>
+</svg>
